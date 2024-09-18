@@ -7,7 +7,7 @@ body:before {
     width: 100%;
     height: 100%;
     opacity: 0.1;
-    background-image: url(HP2-01.png);
+    background-image: url(img/background.png);
     background-repeat: repeat;
     background-position: 0 0;
     background-size: cover;
