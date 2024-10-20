@@ -1,0 +1,328 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2024/asterisksinsports/"
+     xml:base="http://www.semanticweb.org/ontologies/2024/asterisksinsports/"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="https://www.w3.org/2006/time#"
+     xmlns:sports="https://sportschema.org/ontologies/main/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#achievedInSport -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#achievedInSport">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Sport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#during -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#during">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimePeriod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#hadParticipant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#hadParticipant">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#participatedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#locatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#locatedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#miredIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#miredIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ControversyType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#organisedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#organisedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Sport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#participatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#participatedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Participant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#playedInSport -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#playedInSport">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Participant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Sport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#underAuspicesOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#underAuspicesOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/Location -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/Location">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement">
+        <rdfs:comment>Represents a sporting accomplishment made by a sportsperson or a group of sportspeople. This ranges from winning championship titles, through outstanding performances and breaking records to just qualifying to participate at a certain event.</rdfs:comment>
+        <rdfs:label>Achievement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#ContextualFactors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ContextualFactors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ControversyType"/>
+        <rdfs:comment>Represents the cases, where the legitimacy of an achievement has been challenged due to factors outside of the actual sporting results.</rdfs:comment>
+        <rdfs:label>Contextual factors</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#ControversyType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ControversyType">
+        <rdfs:comment>Represents the type of controversy surrounding a sporting achievement.</rdfs:comment>
+        <rdfs:label>Controversy type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Doping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Doping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ControversyType"/>
+        <rdfs:comment>Represents cases, where a sporting achievement has been surrounded by controversiues due to improving performance through illicit chemicals.</rdfs:comment>
+        <rdfs:label>Doping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Ethics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Ethics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ControversyType"/>
+        <rdfs:comment>Represents cases, where a sporting achievement has been surrounded by controversies due to ethical considerations.</rdfs:comment>
+        <rdfs:label>Ethics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Gender -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Gender">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ControversyType"/>
+        <rdfs:comment>Represents cases, where a sporting achievement has been surrounded by controversies due to athletes gender/hormone levels.</rdfs:comment>
+        <rdfs:label>Gender issues</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody">
+        <owl:equivalentClass rdf:resource="https://sportschema.org/ontologies/main/GoverningBody"/>
+        <rdfs:comment>Represents the governing body, under whose auspices the event was run, in which an achievement has been made in.</rdfs:comment>
+        <rdfs:label>Governing body</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location">
+        <rdfs:comment>Represents the singular physical location (if possible), or a broader geographical context, where an Achievement has taken place.</rdfs:comment>
+        <rdfs:label>Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#NonParticipant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#NonParticipant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#People"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Participant"/>
+        <rdfs:comment>Represents people not directly participating in the sporting events, such as fans.</rdfs:comment>
+        <rdfs:label>Non-participant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Officiating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Officiating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ControversyType"/>
+        <rdfs:comment>Represents cases, where a sporting achievement has been surrounded by controversies due to officiating mistakes and/or corrupt officials.</rdfs:comment>
+        <rdfs:label>Officiating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Participant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Participant">
+        <owl:equivalentClass rdf:resource="https://sportschema.org/ontologies/main/Agent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#People"/>
+        <rdfs:comment>Representation of a specific sportsperson, or a group of sportspeople participating in a club or representing their nation in a sporting competition.</rdfs:comment>
+        <rdfs:label>Participant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#People -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#People">
+        <rdfs:comment>Representation of both participants and non-participants in a sporting event.</rdfs:comment>
+        <rdfs:label>People</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#RuleViolation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#RuleViolation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ControversyType"/>
+        <rdfs:comment>Represents cases, where a sporting achievement has been surrounded by controversies due to violating the ruleset of the sport or competition.</rdfs:comment>
+        <rdfs:label>Rule violation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Sport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Sport">
+        <rdfs:comment>Represents the sport, in which an Achievement has been made in.</rdfs:comment>
+        <rdfs:label>Sport</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Technology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Technology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ControversyType"/>
+        <rdfs:comment>Represents cases, where a sporting achievement has been surrounded by controversies due to technological advancements impacting the result.</rdfs:comment>
+        <rdfs:label>Technological advancements</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimePeriod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimePeriod">
+        <owl:equivalentClass rdf:resource="https://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:comment>Represents the timeframe, when an Achievement has taken place.</rdfs:comment>
+        <rdfs:label>Time period</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://sportschema.org/ontologies/main/Agent -->
+
+    <owl:Class rdf:about="https://sportschema.org/ontologies/main/Agent"/>
+    
+
+
+    <!-- https://sportschema.org/ontologies/main/GoverningBody -->
+
+    <owl:Class rdf:about="https://sportschema.org/ontologies/main/GoverningBody"/>
+    
+
+
+    <!-- https://www.w3.org/2006/time#TemporalEntity -->
+
+    <owl:Class rdf:about="https://www.w3.org/2006/time#TemporalEntity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ContextualFactors"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Doping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Ethics"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Gender"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Officiating"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#RuleViolation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Technology"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

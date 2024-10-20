@@ -26,7 +26,6 @@
                                 <a class="nav-link ms-3 my-1" href="#item2-1">2.1 First-level modelling</a>
                                 <a class="nav-link ms-3 my-1" href="#item2-2">2.2 Second-level modelling</a>
                                 <a class="nav-link ms-3 my-1" href="#item2-3">2.3 Final integration</a>
-                                <a class="nav-link ms-3 my-1" href="#item2-4">2.4 Further development</a>
                             </nav>
                             <a class="nav-link" href="#item3">3 - Knowledge extraction</a>
                             <nav class="nav nav-pills flex-column">
@@ -34,6 +33,9 @@
                                 <a class="nav-link ms-3 my-1" href="#item3-2">3.2 Knowledge graph</a>
                             </nav>
                             <a class="nav-link" href="#item4">4 - Conclusions</a>
+                            <nav class="nav nav-pills flex-column">
+                                <a class="nav-link ms-3 my-1" href="#item4-1">4.1 Further development</a>
+                            </nav>
                             <a class="nav-link" href="#item5">5 - Bibliography</a>
                         </nav>
                     </nav>
@@ -243,12 +245,82 @@
                         </div>
                         <div id="item2-1">
                             <h4>2.1 - First-level modelling</h4>
-                            <p>Basic ontology creation</p>
-                            <p>Competency questions</p>
-                            <p>Basic classes</p>
-                            <p>Basic properties</p>
-                            <h5>2.1.1 - Basic ontology creation</h5>
-                            <p>yadda yadda</p>
+                            <h5>2.1.1 - Competency questions</h5>
+                            <p>Development of the basic ontology started with preparing some competency questions, which we would expect to be answered. Prefixes added to SPARQL queries:</p>
+                            <pre>
+                                PREFIX ais: &lt;http://www.semanticweb.org/ontologies/2024/asterisksinsports&gt;
+                                PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+                                PREFIX sports: &lt;https://sportschema.org/ontologies/main/&gt;
+                                PREFIX dct: &lt;http://purl.org/dc/terms/&gt;
+                                PREFIX time: &lt;https://www.w3.org/2006/time#&gt;
+                                PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+                                PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+                            </pre>
+                            <p>The competency questions are provided with corresponding SPARQL queries:</p>
+                            <p><b>What are some recent examples of sporting controversies?</b></p>
+                            <pre>
+                                SELECT ?achievement ?controversyType
+                                WHERE {
+                                    ?achievement ais:miredIn ?controversyType.
+                                    ?achievement ais:during ?timePeriod.
+                                    ?timePeriod time:after "2000-01-01"^^xsd:date.
+                                }
+                            </pre>
+                            <p><b>What examples of controversies do we know happened in a specific sport, e.g. ski jumping?</b></p>
+                            <pre>
+                                SELECT ?achievement ?controversyType
+                                WHERE {
+                                    ?achievement ais:miredIn ?controversyType.
+                                    ?achievement ais:achievedInSport ?sport.
+                                    ?sport rdfs:label "Ski jumping"^^xsd:string.
+                                }
+                            </pre>
+                            <p><b>What are some sportspeople who had their titles challenged because of doping?</b></p>
+                            <pre>
+                                SELECT ?achievement ?controversyType ?sportsperson
+                                WHERE {
+                                    ?achievement ais:miredIn ?controversyType.
+                                    ?controversyType rdfs:label "Doping"^^xsd:string.
+                                    ?achievement ais:hadParticipant ?sportsperson.
+                                }
+                            </pre>
+                            <p><b>What controversies arose in competitions organised by the Polish Football Association?</b></p>
+                            <pre>
+                                SELECT ?achievement ?controversyType
+                                WHERE {
+                                    ?achievement ais:miredIn ?controversyType.
+                                    ?achievement ais:achievedInSport ?sport.
+                                    ?sport ais:organisedBy ?governingBody.
+                                    ?governingBody rdfs:label "PZPN"^^xsd:string.
+                                }
+                            </pre>
+                            <p><b>What sporting controversies arose in the United States?</b></p>
+                            <pre>
+                                SELECT ?achievement ?controversyType
+                                WHERE {
+                                    ?achievement ais:miredIn ?controversyType.
+                                    ?achievement ais:locatedIn ?location.
+                                    ?location rdfs:label "United States"^^xsd:string.
+                                }
+                            </pre>
+                            <p><b>Are technological advancements leading to controversies in multiple sports?</b></p>
+                            <pre>
+                                SELECT DISTINCT ?sport ?achievement
+                                WHERE {
+                                    ?achievement ais:miredIn ?controversyType.
+                                    ?controversyType rdfs:label "Technological advancements".
+                                    ?achievement? ais:achievedInSport ?sport.
+                                }
+                            </pre>
+                            <p><b>Is an athlete's gender leading to controversies regarding their sporting achievements a modern phenomenon?</b></p>
+                            <pre>
+                                SELECT ?achievement ?controversyType ?timePeriod
+                                WHERE {
+                                    ?achievement ais:miredIn ?controversyType.
+                                    ?controversyType rdfs:label "Gender"^^xsd:string.
+                                    ?achievement ais:during ?timePeriod.
+                                }
+                            </pre>
                             <h5>2.1.2 - Classes and properties</h5>
                             <h6>Classes</h6>
                             <ul><li><b>Achievement</b></li></ul>
@@ -268,29 +340,40 @@
                             </ul></p>
                             <ul><li><b>Sport</b></li></ul>
                             <p>Represents the sport, in which an <b>Achievement</b> has been made in.</p>
+                            <ul><li><b>GoverningBody</b></li></ul>
+                            <p>Represents the governing body, under whose auspices the event was run, in which an <b>Achievement</b> has been made in.</p>
                             <ul><li><b>Location</b></li></ul>
                             <p>Represents the singular physical location (if possible), or a broader geographical context, where an <b>Achievement</b> has taken place.</p>
                             <ul><li><b>TimePeriod</b></li></ul>
                             <p>Represents the timeframe, when an <b>Achievement</b> has taken place.</p>
                             <h6>Properties</h6>
-                            <ul><li><b>hadParticipant (Achievement -> People)</b></li></ul>
+                            <ul><li><b>hadParticipant (Achievement -> Participant)</b></li></ul>
                             <p>Links a sporting accomplishment to a sportsperson or sportspeople.</p>
-                            <ul><li><b>participatedIn (People -> Achievement)</b></li></ul>
+                            <ul><li><b>participatedIn (Participant -> Achievement)</b></li></ul>
                             <p>An inverse of the previous property, links a sportsperson or sportspeople to their sporting accomplishment</p>
                             <ul><li><b>miredIn (Achievement -> ControversyType)</b></li></ul>
                             <p>Links a sporting achievement to a type of controversy surrounding it.</p>
                             <ul><li><b>achievedInSport (Achievement -> Sport)</b></li></ul>
                             <p>Links a sporting accomplishment to the sport it was achieved in.</p>
-                            <ul><li><b>playedInSport (People -> Sport)</b></li></ul>
+                            <ul><li><b>playedInSport (Participant -> Sport)</b></li></ul>
                             <p>Links a sportsperson or sportspeople to a sport in which they participated in.</p>
+                            <ul><li><b>underAuspicesOf (Achievement -> GoverningBody)</b></li></ul>
+                            <p>Links a sporting accomplishment to the governing body, under which auspices it was achieved in.</p>
+                            <ul><li><b>organisedBy (Sport -> GoverningBody)</b></li></ul>
+                            <p>Links a sport to a governing body, which organises events.</p>
                             <ul><li><b>locatedIn (Achievement -> Location)</b></li></ul>
                             <p>Links a sporting accomplishment to a geographical location or region it was achieved in.</p>
                             <ul><li><b>during (Achievement -> TimePeriod)</b></li></ul>
                             <p>Links a sporting accomplishment to a time period it was achieved in.</p>
-                            <ul><li><b>hasName (People -> rdfs:Literal)</b></li></ul>
-                            <p>Provides a name of a sportsperson or a group of sportspeople (club or nation).</p>
-                            <h5>2.1.3 - Competency questions</h5>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
+                            <h5>2.1.3 - Basic ontology creation</h5>
+                            <img src="img/ontologyv1.png" alt="Visualisation of the first-level ontology" height="97%" width="97%">
+                            <p> Visualisation also available <a target="_blank" href="http://owlgred.lumii.lv/online_visualization/zwaw">here</a>. The corresponding prefixes are:<br>
+                            <sub>: <i>http://www.semanticweb.org/ontologies/2024/asterisksinsports</i></sub><br>
+                            <sub>dct: <i>http://purl.org/dc/terms/</i></sub><br>
+                            <sub>sports: <i>https://sportschema.org/ontologies/main/</i></sub><br>
+                            <sub>time: <i>https://www.w3.org/2006/time#</i></sub></p>
+                            <p>The visualisation shows the basic ontology capturing the core concepts and relationships in relation to sports and the surrounding controversies. Through <i>sports:</i>, the created ontology is linked to another representation of sporting events. We believe that breaking down the types of controversies into several smaller groups is necessary to facilitate understanding of the underlying issues of why some sporting achievements are viewed at negatively, and thus expect the relations between them and <b>NonParticipant</b>s to be one of the focal points of the next part of modelling.</p>
+                            <p>The basic ontology is available <a href="ontologies/asterisksinsports.rdf">here</a>.</p>
                         </div>
                         <div id="item2-2">
                             <h4>2.2 - Second-level modelling</h4>
@@ -345,30 +428,6 @@
                             <p>Filling space for testing data-spy scrolling on the sidebar</p>
                             <p>Filling space for testing data-spy scrolling on the sidebar</p>
                         </div>
-                        <div id="item2-4">
-                            <h4>2.4 - Further development</h4>
-                            <p>idk 🤗</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                        </div>
                         <div id="item3">
                             <h3>3 - Knowledge extraction</h3>
                             <p>blablabla</p>
@@ -397,79 +456,22 @@
                             <h4>3.1 - Dataset</h4>
                             <p>Translation of the examples into a csv file</p>
                             <p>Idea to think about - provide final classes and properties to chatgpt and ask it to provide new ones, then try to double check it</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
                         </div>
                         <div id="item3-2">
                             <h4>3.2 - Knowledge graph</h4>
                             <p>Load up the ontology in Protege</p>
                             <p>Merge it with the dataset</p>
                             <p>Show some results ig</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
                         </div>
                         <div id="item4">
                             <h3>4 - Conclusions</h3>
                             <p>What we wanted to do</p>
                             <p>What we managed to do</p>
                             <p>What we did not manage to do</p>
+                        </div>
+                        <div id="item4-1">
+                            <h4>4.1 - Further development</h4>
                             <p>Perspectives for further development ig</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
                         </div>
                         <div id="item5">
                             <h3>5 - Bibliography</h3>
