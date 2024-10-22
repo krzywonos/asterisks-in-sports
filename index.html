@@ -25,7 +25,6 @@
                             <nav class="nav nav-pills flex-column">
                                 <a class="nav-link ms-3 my-1" href="#item2-1">2.1 First-level modelling</a>
                                 <a class="nav-link ms-3 my-1" href="#item2-2">2.2 Second-level modelling</a>
-                                <a class="nav-link ms-3 my-1" href="#item2-3">2.3 Final integration</a>
                             </nav>
                             <a class="nav-link" href="#item3">3 - Knowledge extraction</a>
                             <nav class="nav nav-pills flex-column">
@@ -238,10 +237,11 @@
                         </div>
                         <div id="item2">
                             <h3>2 - Knowledge representation</h3>
-                            <p>We decided to use a multi-level modelling strategy for the creation of the ontology representing sporting controversies. This involves two different levels:</p>
+                            <p>We decided to use a three-level modelling strategy for the creation of the ontology representing sporting controversies. This involves two different levels:</p>
                             <p>1. A model representing the events in question, and their surrounding controversies.</p>
                             <p>2. A model representing the differing perspectives of the followers of said events.</p>
-                            <p>Also, they both need to aligned and integrated later, being progressively build to create a representation that's both detailed and comprehensive.</p>
+                            <p>3. A model slightly expanded to include properties for textual descriptions, mostly to facilitate use of SPARQL.</p>
+                            <p>The second level will be progressively build on top of the first to create a representation that's both detailed and comprehensive.</p>
                         </div>
                         <div id="item2-1">
                             <h4>2.1 - First-level modelling</h4>
@@ -272,7 +272,7 @@
                                 WHERE {
                                     ?achievement ais:miredIn ?controversyType.
                                     ?achievement ais:achievedInSport ?sport.
-                                    ?sport rdfs:label "Ski jumping"^^xsd:string.
+                                    ?sport ais:named "Ski jumping"^^xsd:string.
                                 }
                             </pre>
                             <p><b>What are some sportspeople who had their titles challenged because of doping?</b></p>
@@ -280,7 +280,7 @@
                                 SELECT ?achievement ?controversyType ?sportsperson
                                 WHERE {
                                     ?achievement ais:miredIn ?controversyType.
-                                    ?controversyType rdfs:label "Doping"^^xsd:string.
+                                    ?controversyType ais:named "Doping"^^xsd:string.
                                     ?achievement ais:hadParticipant ?sportsperson.
                                 }
                             </pre>
@@ -291,7 +291,7 @@
                                     ?achievement ais:miredIn ?controversyType.
                                     ?achievement ais:achievedInSport ?sport.
                                     ?sport ais:organisedBy ?governingBody.
-                                    ?governingBody rdfs:label "PZPN"^^xsd:string.
+                                    ?governingBody ais:named "PZPN"^^xsd:string.
                                 }
                             </pre>
                             <p><b>What sporting controversies arose in the United States?</b></p>
@@ -300,7 +300,7 @@
                                 WHERE {
                                     ?achievement ais:miredIn ?controversyType.
                                     ?achievement ais:locatedIn ?location.
-                                    ?location rdfs:label "United States"^^xsd:string.
+                                    ?location ais:named "United States"^^xsd:string.
                                 }
                             </pre>
                             <p><b>Are technological advancements leading to controversies in multiple sports?</b></p>
@@ -308,7 +308,7 @@
                                 SELECT DISTINCT ?sport ?achievement
                                 WHERE {
                                     ?achievement ais:miredIn ?controversyType.
-                                    ?controversyType rdfs:label "Technological advancements".
+                                    ?controversyType ais:named "Technological advancements".
                                     ?achievement? ais:achievedInSport ?sport.
                                 }
                             </pre>
@@ -317,7 +317,7 @@
                                 SELECT ?achievement ?controversyType ?timePeriod
                                 WHERE {
                                     ?achievement ais:miredIn ?controversyType.
-                                    ?controversyType rdfs:label "Gender"^^xsd:string.
+                                    ?controversyType ais:named "Gender"^^xsd:string.
                                     ?achievement ais:during ?timePeriod.
                                 }
                             </pre>
@@ -377,80 +377,172 @@
                         </div>
                         <div id="item2-2">
                             <h4>2.2 - Second-level modelling</h4>
-                            <p>Perspectivisation frame integration</p>
-                            <p>Perspectivisation competency questions</p>
-                            <p>New classes and properties</p>
-                            <p>Ontology alignment</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                        </div>
-                        <div id="item2-3">
-                            <h4>2.3 - Final integration</h4>
-                            <p>Merging 2.2 and 2.3 to create a unified ontology</p>
-                            <p>Linking the resulting rdf/turtle file</p>
+                            <h5>2.2.1 - Perspectivisation competency questions</h5>
+                            <p>Before starting work on an expanded ontology including perspectivisation, we prepared another set of competency questions, which we would expect to be answered. Prefixes added to SPARQL queries:</p>
+                            <pre>
+                                PREFIX ais: &lt;http://www.semanticweb.org/ontologies/2024/asterisksinsports&gt;
+                                PREFIX perspectivisation: &lt;http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#&gt;
+                                PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+                                PREFIX sports: &lt;https://sportschema.org/ontologies/main/&gt;
+                                PREFIX dct: &lt;http://purl.org/dc/terms/&gt;
+                                PREFIX time: &lt;https://www.w3.org/2006/time#&gt;
+                                PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+                                PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+                            </pre>
+                            <p><b>What factors lead to positive attitudes to a controversial sporting achievement, e.g. Florence Griffith-Jones' 100m women's world record?</b></p>
+                            <pre>
+                                SELECT ?viewpoint ?context
+                                WHERE {
+                                    ?person ais:hasViewpoint ?viewpoint.
+                                    ?viewpoint ais:determines ais:positiveAttitude.
+                                    ?viewpoint ais:towards ?achievement.
+                                    ?achievement ais:isInfluenced ?context.
+                                    ?context ais:influences ais:positiveAttitude.
+                                    ?achievement ais:named "100m women's world record"^^xsd:string.
+                                }
+                            </pre>
+                            <p><b>What factors lead to negative attitudes to a controversial sporting achievement, e.g. Zagłębie's 2006/07 Polish championship?</b></p>
+                            <pre>
+                                SELECT ?viewpoint ?context
+                                WHERE {
+                                    ?person ais:hasViewpoint ?viewpoint.
+                                    ?viewpoint ais:determines ais:negativeAttitude.
+                                    ?viewpoint ais:towards ?achievement.
+                                    ?viewpoint ais:isInfluenced ?context.
+                                    ?context ais:influences ais:negativeAttitude.
+                                    ?achievement ais:named "100m women's world record"^^xsd:string.
+                                }
+                            </pre>
+                            <p><b>What factors lead to changes in attitude towards a controversial sporting achievements, e.g. Bjarne Riis' 1996 TdF win?</b></p>
+                            <pre>
+                                SELECT ?attitudeShift ?viewpoint ?context
+                                WHERE {
+                                    ?person ais:hasViewpoint ?viewpoint.
+                                    ?viewpoint ais:characterisedBy ?attitudeShift.
+                                    ?viewpoint ais:determines ais:negativeAttitude.
+                                    ?viewpoint ais:towards ?achievement.
+                                    ?viewpoint ais:isInfluenced ?context.
+                                    ?context ais:influences ais:negativeAttitude.
+                                    ?achievement ais:named "100m women's world record"^^xsd:string.
+                                }
+                            </pre>
+                            <h5>2.2.2 - New classes and properties</h5>
+                            <h6>Classes</h6>
+                            <ul><li><b>Viewpoint</b></li></ul>
+                            <p>Represents a perspective of an individual towards a sporting achievement.</p>
+                            <ul><li><b>PositiveAttitude/NegativeAttitude</b></li></ul>
+                            <p>Represent different outlooks towards a sporting achievement.</p>
+                            <ul><li><b>Context</b></li></ul>
+                            <p>Represents context and a plethora of external factors (e.g. media coverage, personal knowledge, cultural and moral values) influencing outlooks on a sporting achievement.</p>
+                            <ul><li><b>AttitudeShift</b></li></ul>
+                            <p>Represents a personal shift of attitute regarding a sporting achievement.</p>
+                            <h6>Properties</h6>
+                            <ul><li><b>hasViewpoint (People -> Viewpoint)</b></li></ul>
+                            <p>Links a person to their viewpoint on a sporting achievement.</p>
+                            <ul><li><b>hasAttitude (People -> PositiveAttitude/NegativeAttitude)</b></li></ul>
+                            <p>Links a person to their viewpoint towards a sporting achievement.</p>
+                            <ul><li><b>isInfluenced (Viewpoint -> Context)</b></li></ul>
+                            <p>Links a person's viewpoint on a sporting achievement to personal context.</p>
+                            <ul><li><b>influences (Context -> PositiveAttitude/NegativeAttitude)</b></li></ul>
+                            <p>Links personal context to a person's attitude towards a sporting achievement.</p>
+                            <ul><li><b>determines(Viewpoint -> PositiveAttitude/NegativeAttitude)</b></li></ul>
+                            <p>Links a person's viewpoint on a sporting achievement to their attitude towards it.</p>
+                            <ul><li><b>towards(Viewpoint -> Achievement)</b></li></ul>
+                            <p>Links a person's viewpoint towards a sporting achievement to said sporting achievement.</p>
+                            <ul><li><b>characterisedBy (Viewpoint -> AttitudeShift)</b></li></ul>
+                            <p>Links a personal viewpoint towards a sporting achievement to potential shifts in attitude impacting the viewpoint.</p>
+                            <h5>2.2.3 - Aligning ontologies</h5>
+                            <table class="table-dark">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Achievement</th>
+                                        <th scope="col">Eventuality</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Achievement represents "eventuality" in being a situation that occurred as a result of a (or multiple of) sporting event. A sporting achievement can be observed and described through various lenses, and the interpretation of it depends on the perspective of a viewer.</td>
+                                        <td>Situation or event being described. Can be viewed through different lenses to produce different perspectives, extracted from background knowledge.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table-dark">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Viewpoint</th>
+                                        <th scope="col">Lens</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>A viewpoint represents a perspective, through which a sporting achievement is viewed, of (non-)participants of a sporting event, which led to an achievement.</td>
+                                        <td>Perspective or a contextual framework through which an eventuality is viewed, described and interpreted.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table-dark">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">PositiveAttitude/NegativeAttitude</th>
+                                        <th scope="col">Attitude</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Stance of the (non-)participants to a sporting achievement. While neutral attitude could be a valid third option, we believe that in practice, it would lead to the same viewpoint as a positive attitude.</td>
+                                        <td>Stance of the conceptualisers regarding a perceived eventuality through a specific lens.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table-dark">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Context</th>
+                                        <th scope="col">Background</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Contextual information, media coverage, personal knowledge and other information relating to a sporting achievement.</td>
+                                        <td>Information, context, knowledge and understanding used to interpret an eventuality.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table-dark">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">AttitudeShift</th>
+                                        <th scope="col">Cut</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>A change in the perception of a sporting achievement.</td>
+                                        <td>A new perspective emerging when an eventuality is reinterpreted.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h5>2.2.4 - Second-level ontology</h5>
+                            <p>show the ontology here</p>
+                            <p>link the ontology</p>
                             <p>WebOWL visualisation</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
+                            <div id="item2-3">
+                                <h4>2.3 - Final touches</h4>
+                                <h5>2.3.1 - New classes and properties</h5>
+                                <h6>Classes</h6>
+                                <ul><li><b></b></li></ul>
+                                <p></p>
+                                <h6>Properties</h6>
+                                <ul><li><b></b></li></ul>
+                                <p></p>
+                                <h5>2.3.2 - Final ontology</h5>
+                                <p>show the ontology here</p>
+                                <p>link the ontology</p>
+                                <p>WebOWL visualisation</p>
                         </div>
                         <div id="item3">
                             <h3>3 - Knowledge extraction</h3>
-                            <p>blablabla</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
+                            <p>intro</p>
                         </div>
                         <div id="item3-1">
                             <h4>3.1 - Dataset</h4>
@@ -461,7 +553,7 @@
                             <h4>3.2 - Knowledge graph</h4>
                             <p>Load up the ontology in Protege</p>
                             <p>Merge it with the dataset</p>
-                            <p>Show some results ig</p>
+                            <p>Show some results ig, like the results of the queries of the competency questions, come up with some new ones?</p>
                         </div>
                         <div id="item4">
                             <h3>4 - Conclusions</h3>
@@ -475,8 +567,8 @@
                         </div>
                         <div id="item5">
                             <h3>5 - Bibliography</h3>
-                            <p>kinda self-explanatory innit</p>
                             <p>Agafonova, R. (2021). Global Maradona: Man, athlete, celebrity, idol, hero, myth. “Proud, rebel, political”: How Maradona influenced football governance. Eracle. Journal of Sport and Social Sciences, 4(2). ISSN 2611-6693.</p>
+                            <p>Gangemi, Aldo, and Presutti, Valentina. "Formal Representation and Extraction of Perspectives", in Creating a More Transparent Internet, The Perspective Web, pp. 208-228, Cambridge University Press, April 2022.</p>
                             <p>McArdle, D. (2015). Dispute resolution in sport: Athletes, law and arbitration. Routledge.</p>
                             <p>McFee, G. (2004). Sport, rules, and values: Philosophical investigations into the nature of sport. Routledge.</p>
                             <p>“Philosophy of Sport.” (2020). Stanford Encyclopedia of Philosophy. https://plato.stanford.edu/entries/sport/</p>
@@ -485,17 +577,6 @@
                             <p>van Kleef, R. (2014). The legal status of disciplinary regulations in sport. International Sports Law Journal, 14(1), 24–45. https://doi.org/10.1007/s40318-013-0035-z</p>
                             <p>Natalya F. Noy and Deborah L. McGuinness, "Ontology Development 101: A Guide to Creating Your First Ontology," Stanford University, Knowledge Systems Laboratory Technical Report, 2001.</p>
                             <p>Valentina Presutti, Enrico Daga, Aldo Gangemi, and Eva Blomqvist, "Extreme Design with Content Ontology Design Patterns," Semantic Technology Laboratory, ISTC-CNR.</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
-                            <p>Filling space for testing data-spy scrolling on the sidebar</p>
                         </div>
                     </div>
                 </div>
