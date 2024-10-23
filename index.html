@@ -237,10 +237,9 @@
                         </div>
                         <div id="item2">
                             <h3>2 - Knowledge representation</h3>
-                            <p>We decided to use a three-level modelling strategy for the creation of the ontology representing sporting controversies. This involves two different levels:</p>
+                            <p>We decided to use a two-level modelling strategy for the creation of the ontology representing sporting controversies. This involves two different levels:</p>
                             <p>1. A model representing the events in question, and their surrounding controversies.</p>
                             <p>2. A model representing the differing perspectives of the followers of said events.</p>
-                            <p>3. A model slightly expanded to include properties for textual descriptions, mostly to facilitate use of SPARQL.</p>
                             <p>The second level will be progressively build on top of the first to create a representation that's both detailed and comprehensive.</p>
                         </div>
                         <div id="item2-1">
@@ -249,12 +248,10 @@
                             <p>Development of the basic ontology started with preparing some competency questions, which we would expect to be answered. Prefixes added to SPARQL queries:</p>
                             <pre>
                                 PREFIX ais: &lt;http://www.semanticweb.org/ontologies/2024/asterisksinsports&gt;
-                                PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
                                 PREFIX sports: &lt;https://sportschema.org/ontologies/main/&gt;
                                 PREFIX dct: &lt;http://purl.org/dc/terms/&gt;
                                 PREFIX time: &lt;https://www.w3.org/2006/time#&gt;
                                 PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
-                                PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
                             </pre>
                             <p>The competency questions are provided with corresponding SPARQL queries:</p>
                             <p><b>What are some recent examples of sporting controversies?</b></p>
@@ -382,12 +379,10 @@
                             <pre>
                                 PREFIX ais: &lt;http://www.semanticweb.org/ontologies/2024/asterisksinsports&gt;
                                 PREFIX perspectivisation: &lt;http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#&gt;
-                                PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
                                 PREFIX sports: &lt;https://sportschema.org/ontologies/main/&gt;
                                 PREFIX dct: &lt;http://purl.org/dc/terms/&gt;
                                 PREFIX time: &lt;https://www.w3.org/2006/time#&gt;
                                 PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
-                                PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
                             </pre>
                             <p><b>What factors lead to positive attitudes to a controversial sporting achievement, e.g. Florence Griffith-Jones' 100m women's world record?</b></p>
                             <pre>
@@ -523,22 +518,13 @@
                                 </tbody>
                             </table>
                             <h5>2.2.4 - Second-level ontology</h5>
-                            <p>show the ontology here</p>
-                            <p>link the ontology</p>
-                            <p>WebOWL visualisation</p>
-                            <div id="item2-3">
-                                <h4>2.3 - Final touches</h4>
-                                <h5>2.3.1 - New classes and properties</h5>
-                                <h6>Classes</h6>
-                                <ul><li><b></b></li></ul>
-                                <p></p>
-                                <h6>Properties</h6>
-                                <ul><li><b></b></li></ul>
-                                <p></p>
-                                <h5>2.3.2 - Final ontology</h5>
-                                <p>show the ontology here</p>
-                                <p>link the ontology</p>
-                                <p>WebOWL visualisation</p>
+                            <p>A WebVOWL visualisation of the second-level ontology is available <a target="_blank" href="https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/krzywonos/asterisks-in-sports/refs/heads/main/ontologies/asterisksinsports2.rdf">here</a>. The corresponding prefixes are:<br>
+                            <sub>: <i>http://www.semanticweb.org/ontologies/2024/asterisksinsports</i></sub><br>
+                            <sub>perspectivisation: <i>http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#</i></sub>
+                            <sub>dct: <i>http://purl.org/dc/terms/</i></sub><br>
+                            <sub>sports: <i>https://sportschema.org/ontologies/main/</i></sub><br>
+                            <sub>time: <i>https://www.w3.org/2006/time#</i></sub></p>
+                            <p>The ontology is available <a href="ontologies/asterisksinsports2.rdf">here</a>.</p>
                         </div>
                         <div id="item3">
                             <h3>3 - Knowledge extraction</h3>
