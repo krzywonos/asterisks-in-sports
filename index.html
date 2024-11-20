@@ -343,6 +343,8 @@
                             <p>Represents the singular physical location (if possible), or a broader geographical context, where an <b>Achievement</b> has taken place.</p>
                             <ul><li><b>TimePeriod</b></li></ul>
                             <p>Represents the timeframe, when an <b>Achievement</b> has taken place.</p>
+                            <ul><li><b>Provenance</b></li></ul>
+                            <p>Represents the provenance of <b>People</b>.</p>
                             <h6>Properties</h6>
                             <ul><li><b>hadParticipant (Achievement -> Participant)</b></li></ul>
                             <p>Links a sporting accomplishment to a sportsperson or sportspeople.</p>
@@ -362,9 +364,11 @@
                             <p>Links a sporting accomplishment to a geographical location or region it was achieved in.</p>
                             <ul><li><b>during (Achievement -> TimePeriod)</b></li></ul>
                             <p>Links a sporting accomplishment to a time period it was achieved in.</p>
+                            <ul><li><b>comesFrom (People -> Provenance)</b></li></ul>
+                            <p>Links a participant or a non-participant to a place, from which they come from.</p>
                             <h5>2.1.3 - Basic ontology creation</h5>
                             <img src="img/ontologyv1.png" alt="Visualisation of the first-level ontology" height="97%" width="97%">
-                            <p> Visualisation also available <a target="_blank" href="http://owlgred.lumii.lv/online_visualization/zwaw">here</a>. The corresponding prefixes are:<br>
+                            <p> Visualisation also available <a target="_blank" href="https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/krzywonos/asterisks-in-sports/refs/heads/main/ontologies/asterisksinsports.rdf">here</a>. The corresponding prefixes are:<br>
                             <sub>: <i>http://www.semanticweb.org/ontologies/2024/asterisksinsports</i></sub><br>
                             <sub>dct: <i>http://purl.org/dc/terms/</i></sub><br>
                             <sub>sports: <i>https://sportschema.org/ontologies/main/</i></sub><br>
@@ -384,40 +388,16 @@
                                 PREFIX time: &lt;https://www.w3.org/2006/time#&gt;
                                 PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
                             </pre>
-                            <p><b>What factors lead to positive attitudes to a controversial sporting achievement, e.g. Florence Griffith-Jones' 100m women's world record?</b></p>
-                            <pre>
-                                SELECT ?viewpoint ?context
-                                WHERE {
-                                    ?person ais:hasViewpoint ?viewpoint.
-                                    ?viewpoint ais:determines ais:positiveAttitude.
-                                    ?viewpoint ais:towards ?achievement.
-                                    ?achievement ais:isInfluenced ?context.
-                                    ?context ais:influences ais:positiveAttitude.
-                                    ?achievement ais:named "100m women's world record"^^xsd:string.
-                                }
-                            </pre>
-                            <p><b>What factors lead to negative attitudes to a controversial sporting achievement, e.g. Zagłębie's 2006/07 Polish championship?</b></p>
-                            <pre>
-                                SELECT ?viewpoint ?context
-                                WHERE {
-                                    ?person ais:hasViewpoint ?viewpoint.
-                                    ?viewpoint ais:determines ais:negativeAttitude.
-                                    ?viewpoint ais:towards ?achievement.
-                                    ?viewpoint ais:isInfluenced ?context.
-                                    ?context ais:influences ais:negativeAttitude.
-                                    ?achievement ais:named "100m women's world record"^^xsd:string.
-                                }
-                            </pre>
                             <p><b>What factors lead to changes in attitude towards a controversial sporting achievements, e.g. Bjarne Riis' 1996 TdF win?</b></p>
                             <pre>
                                 SELECT ?attitudeShift ?viewpoint ?context
                                 WHERE {
                                     ?person ais:hasViewpoint ?viewpoint.
                                     ?viewpoint ais:characterisedBy ?attitudeShift.
-                                    ?viewpoint ais:determines ais:negativeAttitude.
+                                    ?viewpoint ais:determines ais:secondaryAttitude.
                                     ?viewpoint ais:towards ?achievement.
                                     ?viewpoint ais:isInfluenced ?context.
-                                    ?context ais:influences ais:negativeAttitude.
+                                    ?context ais:influences ais:secondaryAttitude.
                                     ?achievement ais:named "100m women's world record"^^xsd:string.
                                 }
                             </pre>
@@ -425,7 +405,7 @@
                             <h6>Classes</h6>
                             <ul><li><b>Viewpoint</b></li></ul>
                             <p>Represents a perspective of an individual towards a sporting achievement.</p>
-                            <ul><li><b>PositiveAttitude/NegativeAttitude</b></li></ul>
+                            <ul><li><b>PrimaryAttitude/SecondaryAttitude</b></li></ul>
                             <p>Represent different outlooks towards a sporting achievement.</p>
                             <ul><li><b>Context</b></li></ul>
                             <p>Represents context and a plethora of external factors (e.g. media coverage, personal knowledge, cultural and moral values) influencing outlooks on a sporting achievement.</p>
@@ -434,13 +414,13 @@
                             <h6>Properties</h6>
                             <ul><li><b>hasViewpoint (People -> Viewpoint)</b></li></ul>
                             <p>Links a person to their viewpoint on a sporting achievement.</p>
-                            <ul><li><b>hasAttitude (People -> PositiveAttitude/NegativeAttitude)</b></li></ul>
+                            <ul><li><b>hasAttitude (People -> PrimaryAttitude/SecondaryAttitude)</b></li></ul>
                             <p>Links a person to their viewpoint towards a sporting achievement.</p>
                             <ul><li><b>isInfluenced (Viewpoint -> Context)</b></li></ul>
                             <p>Links a person's viewpoint on a sporting achievement to personal context.</p>
-                            <ul><li><b>influences (Context -> PositiveAttitude/NegativeAttitude)</b></li></ul>
+                            <ul><li><b>influences (Context -> PrimaryAttitude/SecondaryAttitude)</b></li></ul>
                             <p>Links personal context to a person's attitude towards a sporting achievement.</p>
-                            <ul><li><b>determines(Viewpoint -> PositiveAttitude/NegativeAttitude)</b></li></ul>
+                            <ul><li><b>determines(Viewpoint -> PrimaryAttitude/SecondaryAttitude)</b></li></ul>
                             <p>Links a person's viewpoint on a sporting achievement to their attitude towards it.</p>
                             <ul><li><b>towards(Viewpoint -> Achievement)</b></li></ul>
                             <p>Links a person's viewpoint towards a sporting achievement to said sporting achievement.</p>
@@ -478,13 +458,13 @@
                             <table class="table-dark">
                                 <thead>
                                     <tr>
-                                        <th scope="col">PositiveAttitude/NegativeAttitude</th>
+                                        <th scope="col">PrimaryAttitude/SecondaryAttitude</th>
                                         <th scope="col">Attitude</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Stance of the (non-)participants to a sporting achievement. While neutral attitude could be a valid third option, we believe that in practice, it would lead to the same viewpoint as a positive attitude.</td>
+                                        <td>Stance of the (non-)participants to a sporting achievement. It could be represented as PositiveAttitude/NegativeAttitude instead, but we believe that differentiation into Primary and Secondary would be better suited to accomodate AttitudeShift.</td>
                                         <td>Stance of the conceptualisers regarding a perceived eventuality through a specific lens.</td>
                                     </tr>
                                 </tbody>
