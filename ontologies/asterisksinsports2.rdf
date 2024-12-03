@@ -52,6 +52,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#createdBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#createdBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ControversyType"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ElementOfControversy"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#determines -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#determines">
@@ -286,6 +295,15 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ControversyType"/>
         <rdfs:comment>Represents cases, where a sporting achievement has been surrounded by controversiues due to improving performance through illicit chemicals.</rdfs:comment>
         <rdfs:label>Doping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#ElementOfControversy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ElementOfControversy">
+        <rdfs:comment>Represents an element that has lead to existence of, or the root cause of a controversy regarding an Achievement.</rdfs:comment>
+        <rdfs:label>Element of controversy</rdfs:label>
     </owl:Class>
     
 

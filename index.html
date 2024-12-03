@@ -220,7 +220,7 @@
                             <h6>Step 4: Modular Design and Pair Development</h6>
                             <p>Following the principles of eXtreme Design (XD), the ontology should be developed in modules. The task can be divided among team members who work in pairs. One pair can focus on modeling the cognitive perception of fairness in sports, while another can develop modules on ethical considerations or the media’s role in shaping opinions.</p>
                             
-                            <h5>b. Iterative Workflow and Testing</h5>
+                            <h5>a. Iterative Workflow and Testing</h5>
                             <p>Building the cognitive framework should be an iterative, incremental process. According to eXtreme Design guidelines, the project should be organized into iterations. Each iteration should follow these steps:</p>
                             <h6>Task 1: Collect Stories and Examples</h6>
                             <p>Gather cases where asterisks have been used in sports, such as Barry Bonds’ home run record or the 2020 NBA season. These real-life examples provide the content for competency questions and help refine the structure of the ontology.</p>
@@ -231,7 +231,7 @@
                             <h6>Task 4: Integration, Testing, and Refinement</h6>
                             <p>The developed modules should be tested against real-world cases to ensure they accurately model the relationships and cognitive responses. Testing can involve running competency questions in a SPARQL query format to see if the ontology correctly returns expected results based on known facts. This iterative process will help refine the model and ensure it accurately captures the nuances of asterisks in sports.</p>
                             
-                            <h6>c. Analysis of Domain Knowledge and Results</h6>
+                            <h5>b. Analysis of Domain Knowledge and Results</h5>
                             <p>Once the cognitive framework has been established, it can be used to analyze the impact of asterisks on sports narratives and perceptions. The ontology will provide a formalized structure for comparing cases, identifying patterns in the use of asterisks, and drawing conclusions about their effects on sports culture and athletes’ legacies.</p>
                             <p>In conclusion, by following an ontology-driven and iterative development process based on cognitive frameworks, this research will provide a structured way to investigate the meaning, application, and cultural impact of asterisks in sports. Using modular design, competency questions, and iterative testing ensures that the framework can adapt and expand as new cases and insights emerge.</p>
                         </div>
@@ -345,6 +345,8 @@
                             <p>Represents the timeframe, when an <b>Achievement</b> has taken place.</p>
                             <ul><li><b>Provenance</b></li></ul>
                             <p>Represents the provenance of <b>People</b>.</p>
+                            <ul><li><b>ElementOfControversy</b></li></ul>
+                            <p>Represents an element, that has created controversy regarding a certain <b>Achievement</b></p>
                             <h6>Properties</h6>
                             <ul><li><b>hadParticipant (Achievement -> Participant)</b></li></ul>
                             <p>Links a sporting accomplishment to a sportsperson or sportspeople.</p>
@@ -366,6 +368,8 @@
                             <p>Links a sporting accomplishment to a time period it was achieved in.</p>
                             <ul><li><b>comesFrom (People -> Provenance)</b></li></ul>
                             <p>Links a participant or a non-participant to a place, from which they come from.</p>
+                            <ul><li><b>createdBy (ControversyType -> ElementOfControversy)</b></li></ul>
+                            <p>Links an element of controversy to the type of controversy it caused.</p>
                             <h5>2.1.3 - Basic ontology creation</h5>
                             <img src="img/ontologyv1.png" alt="Visualisation of the first-level ontology" height="97%" width="97%">
                             <p> Visualisation also available <a target="_blank" href="https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/krzywonos/asterisks-in-sports/refs/heads/main/ontologies/asterisksinsports.rdf">here</a>. The corresponding prefixes are:<br>
