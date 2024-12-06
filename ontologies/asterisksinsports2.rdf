@@ -66,6 +66,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#determines">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Public_opinion"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
     </owl:ObjectProperty>
     
@@ -95,6 +96,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#hasAttitude">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Actors"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Public_opinion"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
     </owl:ObjectProperty>
     
@@ -114,6 +116,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#influences">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Public_opinion"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
     </owl:ObjectProperty>
     
