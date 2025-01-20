@@ -232,19 +232,30 @@
 
     <!-- http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Attitude -->
 
-    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Attitude"/>
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Attitude">
+        <rdfs:label>Attitude</rdfs:label>
+        <rdfs:label>The behavior of an Actor towards the result of a competition.</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Background -->
 
-    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Background"/>
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Background">
+        <rdfs:comment>The factors that inform the decision or opinion of an Actor. 
+
+They can be cultural, technological, historical, social, political, or economic.</rdfs:comment>
+        <rdfs:label>Background</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Cut -->
 
-    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Cut"/>
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Cut">
+        <rdfs:label>Cut</rdfs:label>
+        <rdfs:label>Represents the moment where and the motivations for Actors change an Attitude.</rdfs:label>
+    </owl:Class>
     
 
 
@@ -256,7 +267,10 @@
 
     <!-- http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Lens -->
 
-    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Lens"/>
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Lens">
+        <rdfs:comment>Represent all the factors that inform the decision or opinion making of an Actor.</rdfs:comment>
+        <rdfs:label>Lens</rdfs:label>
+    </owl:Class>
     
 
 
@@ -382,7 +396,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#NonParticipant">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Actors"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Participant"/>
-        <rdfs:comment>Represents people not directly participating in the sporting events, such as fans.</rdfs:comment>
+        <rdfs:comment>It represents people who do not participate directly in sporting events, such as fans, national governments, and the press.</rdfs:comment>
         <rdfs:label>Non-participant</rdfs:label>
     </owl:Class>
     
@@ -414,8 +428,8 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Attitude"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
-        <rdfs:comment>The primary attitude of a Person, in regards to some Achievement.</rdfs:comment>
-        <rdfs:label>Primary attitude</rdfs:label>
+        <rdfs:comment>The primary decision of an Actor, in regards to some Achievement.</rdfs:comment>
+        <rdfs:label>Primary decision</rdfs:label>
     </owl:Class>
     
 
@@ -425,6 +439,15 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Provenance">
         <rdfs:comment>Represents the place, from which a person comes from, either a participant, or a non-participant.</rdfs:comment>
         <rdfs:label>Provenance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Public_opinion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Public_opinion">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Attitude"/>
+        <rdfs:comment>Manifestation of an Actor about the results of a Achievement.</rdfs:comment>
     </owl:Class>
     
 
@@ -443,8 +466,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Attitude"/>
-        <rdfs:comment>The secondary attitude of a Person, towards a certain Achievement, coming due to a change of viewpoint.</rdfs:comment>
-        <rdfs:label>Secondary attitude</rdfs:label>
+        <rdfs:comment>The secondary decision of an Actor, towards a certain Achievement, coming due to a change of viewpoint.</rdfs:comment>
+        <rdfs:label>Secondary decision</rdfs:label>
     </owl:Class>
     
 
@@ -490,7 +513,10 @@
 
     <!-- https://sportschema.org/ontologies/main/Agent -->
 
-    <owl:Class rdf:about="https://sportschema.org/ontologies/main/Agent"/>
+    <owl:Class rdf:about="https://sportschema.org/ontologies/main/Agent">
+        <rdfs:comment>The person or institution that competes on a competition.</rdfs:comment>
+        <rdfs:label>Agent</rdfs:label>
+    </owl:Class>
     
 
 
@@ -502,7 +528,9 @@
 
     <!-- https://www.w3.org/2006/time#TemporalEntity -->
 
-    <owl:Class rdf:about="https://www.w3.org/2006/time#TemporalEntity"/>
+    <owl:Class rdf:about="https://www.w3.org/2006/time#TemporalEntity">
+        <rdfs:label>TemporalEntity</rdfs:label>
+    </owl:Class>
     
 
 
