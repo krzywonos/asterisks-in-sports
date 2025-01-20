@@ -405,7 +405,7 @@
                             <h6>Classes</h6>
                             <ul><li><b>Viewpoint</b></li></ul>
                             <p>Represents a perspective of an individual towards a sporting achievement.</p>
-                            <ul><li><b>PrimaryAttitude/SecondaryAttitude</b></li></ul>
+                            <ul><li><b>PrimaryDecision/SecondaryDecision/PublicOpinion</b></li></ul>
                             <p>Represent different outlooks towards a sporting achievement.</p>
                             <ul><li><b>Context</b></li></ul>
                             <p>Represents context and a plethora of external factors (e.g. media coverage, personal knowledge, cultural and moral values) influencing outlooks on a sporting achievement.</p>
@@ -414,13 +414,13 @@
                             <h6>Properties</h6>
                             <ul><li><b>hasViewpoint (People -> Viewpoint)</b></li></ul>
                             <p>Links a person to their viewpoint on a sporting achievement.</p>
-                            <ul><li><b>hasAttitude (People -> PrimaryAttitude/SecondaryAttitude)</b></li></ul>
+                            <ul><li><b>hasAttitude (People -> PrimaryDecision/SecondaryDecision/PublicOpinion)</b></li></ul>
                             <p>Links a person to their viewpoint towards a sporting achievement.</p>
                             <ul><li><b>isInfluenced (Viewpoint -> Context)</b></li></ul>
                             <p>Links a person's viewpoint on a sporting achievement to personal context.</p>
-                            <ul><li><b>influences (Context -> PrimaryAttitude/SecondaryAttitude)</b></li></ul>
+                            <ul><li><b>influences (Context -> PrimaryDecision/SecondaryDecision/PublicOpinion)</b></li></ul>
                             <p>Links personal context to a person's attitude towards a sporting achievement.</p>
-                            <ul><li><b>determines(Viewpoint -> PrimaryAttitude/SecondaryAttitude)</b></li></ul>
+                            <ul><li><b>determines(Viewpoint -> PrimaryDecision/SecondaryDecision/PublicOpinion)</b></li></ul>
                             <p>Links a person's viewpoint on a sporting achievement to their attitude towards it.</p>
                             <ul><li><b>towards(Viewpoint -> Achievement)</b></li></ul>
                             <p>Links a person's viewpoint towards a sporting achievement to said sporting achievement.</p>
@@ -458,7 +458,7 @@
                             <table class="table-dark">
                                 <thead>
                                     <tr>
-                                        <th scope="col">PrimaryAttitude/SecondaryAttitude</th>
+                                        <th scope="col">PrimaryDecision/SecondaryDecision/PublicOpinion</th>
                                         <th scope="col">Attitude</th>
                                     </tr>
                                 </thead>

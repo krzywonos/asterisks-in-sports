@@ -448,6 +448,7 @@ They can be cultural, technological, historical, social, political, or economic.
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Public_opinion">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Attitude"/>
         <rdfs:comment>Manifestation of an Actor about the results of a Achievement.</rdfs:comment>
+        <rdfs:label>Public opinion</rdfs:label>
     </owl:Class>
     
 
