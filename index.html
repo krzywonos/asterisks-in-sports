@@ -322,8 +322,6 @@
                             <h6>Classes</h6>
                             <ul><li><b>Achievement</b></li></ul>
                             <p>Represents a sporting accomplishment made by a sportsperson or a group of sportspeople. This ranges from winning championship titles, through outstanding performances and breaking records to just qualifying to participate at a certain event.</p>
-                            <ul><li><b>People</b></li></ul>
-                            <p>This entry can be divided into <b>Participant</b> and <b>NonParticipant</b> for further modelling purposes. <b>Participant</b> is a representation of a specific sportsperson, or a group of sportspeople participating in a club or representing their nation, while <b>NonParticipant</b> represents people not directly participating in the sporting events, such as fans.</p>
                             <ul><li><b>ControversyType</b></li></ul>
                             <p>Represents the type of controversy surrounding a sporting achievement as defined in section <a href="item1-2">1.2</a>, that is:</p>
                             <p><ul>
@@ -343,8 +341,6 @@
                             <p>Represents the singular physical location (if possible), or a broader geographical context, where an <b>Achievement</b> has taken place.</p>
                             <ul><li><b>TimePeriod</b></li></ul>
                             <p>Represents the timeframe, when an <b>Achievement</b> has taken place.</p>
-                            <ul><li><b>Provenance</b></li></ul>
-                            <p>Represents the provenance of <b>People</b>.</p>
                             <ul><li><b>ElementOfControversy</b></li></ul>
                             <p>Represents an element, that has created controversy regarding a certain <b>Achievement</b></p>
                             <h6>Properties</h6>
@@ -366,8 +362,6 @@
                             <p>Links a sporting accomplishment to a geographical location or region it was achieved in.</p>
                             <ul><li><b>during (Achievement -> TimePeriod)</b></li></ul>
                             <p>Links a sporting accomplishment to a time period it was achieved in.</p>
-                            <ul><li><b>comesFrom (People -> Provenance)</b></li></ul>
-                            <p>Links a participant or a non-participant to a place, from which they come from.</p>
                             <ul><li><b>createdBy (ControversyType -> ElementOfControversy)</b></li></ul>
                             <p>Links an element of controversy to the type of controversy it caused.</p>
                             <h5>2.1.3 - Basic ontology creation</h5>
@@ -405,27 +399,41 @@
                             <h6>Classes</h6>
                             <ul><li><b>Viewpoint</b></li></ul>
                             <p>Represents a perspective of an individual towards a sporting achievement.</p>
-                            <ul><li><b>PrimaryDecision/SecondaryDecision/PublicOpinion</b></li></ul>
+                            <ul><li><b>PrimaryAttitude/SecondaryAttitude</b></li></ul>
                             <p>Represent different outlooks towards a sporting achievement.</p>
                             <ul><li><b>Context</b></li></ul>
                             <p>Represents context and a plethora of external factors (e.g. media coverage, personal knowledge, cultural and moral values) influencing outlooks on a sporting achievement.</p>
                             <ul><li><b>AttitudeShift</b></li></ul>
                             <p>Represents a personal shift of attitute regarding a sporting achievement.</p>
                             <h6>Properties</h6>
-                            <ul><li><b>hasViewpoint (People -> Viewpoint)</b></li></ul>
-                            <p>Links a person to their viewpoint on a sporting achievement.</p>
-                            <ul><li><b>hasAttitude (People -> PrimaryDecision/SecondaryDecision/PublicOpinion)</b></li></ul>
-                            <p>Links a person to their viewpoint towards a sporting achievement.</p>
+                            <ul><li><b>hasViewpoint (GoverningBody -> Viewpoint)</b></li></ul>
+                            <p>Links a governing body to its viewpoint on a sporting achievement.</p>
+                            <ul><li><b>hasAttitude (GoverningBody -> PrimaryAttitude/SecondaryAttitude)</b></li></ul>
+                            <p>Links a governing body to its viewpoint towards a sporting achievement.</p>
                             <ul><li><b>isInfluenced (Viewpoint -> Context)</b></li></ul>
-                            <p>Links a person's viewpoint on a sporting achievement to personal context.</p>
-                            <ul><li><b>influences (Context -> PrimaryDecision/SecondaryDecision/PublicOpinion)</b></li></ul>
-                            <p>Links personal context to a person's attitude towards a sporting achievement.</p>
-                            <ul><li><b>determines(Viewpoint -> PrimaryDecision/SecondaryDecision/PublicOpinion)</b></li></ul>
-                            <p>Links a person's viewpoint on a sporting achievement to their attitude towards it.</p>
-                            <ul><li><b>towards(Viewpoint -> Achievement)</b></li></ul>
-                            <p>Links a person's viewpoint towards a sporting achievement to said sporting achievement.</p>
+                            <p>Links a governing body's viewpoint on a sporting achievement to context.</p>
+                            <ul><li><b>influences (Context -> PrimaryAttitude/SecondaryAttitude)</b></li></ul>
+                            <p>Links context to a governing body's attitude towards a sporting achievement.</p>
+                            <ul><li><b>determines (Viewpoint -> PrimaryAttitude/SecondaryAttitude)</b></li></ul>
+                            <p>Links a governing body's viewpoint on a sporting achievement to its attitude towards it.</p>
+                            <ul><li><b>towards (Viewpoint -> Achievement)</b></li></ul>
+                            <p>Links a governing body's viewpoint towards a sporting achievement to said sporting achievement.</p>
                             <ul><li><b>characterisedBy (Viewpoint -> AttitudeShift)</b></li></ul>
-                            <p>Links a personal viewpoint towards a sporting achievement to potential shifts in attitude impacting the viewpoint.</p>
+                            <p>Links a viewpoint towards a sporting achievement to potential shifts in attitude impacting the viewpoint.</p>
+                            <ul><li><b>hasContext (Achievement -> Context)</b></li></ul>
+                            <p>Links a sporting achievement to its context.</p>
+                            <ul><li><b>towards (Controversy -> Achievement)</b></li></ul>
+                            <p>Links a controversy towards a sporting achievement in which it occurred.</p>
+                            <ul><li><b>alterates (Controversy -> Context)</b></li></ul>
+                            <p>Links a controversy to context surrounding a sporting achievement it alterates.</p>
+                            <ul><li><b>influences (Context -> AttitudeShift)</b></li></ul>
+                            <p>Links a context to attitude shift it influences.</p>
+                            <ul><li><b>hasAttitudeShift (GoverningBody -> AttitudeShift)</b></li></ul>
+                            <p>Links a governing body to a shift in attitude towards a sporting achievement.</p>
+                            <ul><li><b>isinfluencedBy (AttitudeShift -> Context)</b></li></ul>
+                            <p>Links an attitude shift to context it's influenced by.</p>
+                            <ul><li><b>alterates (AttitudeShift -> Viewpoint)</b></li></ul>
+                            <p>Links an attitude shift towards the viewpoint of a govverning body it alterates.</p>
                             <h5>2.2.3 - Aligning ontologies</h5>
                             <table class="table-dark">
                                 <thead>
@@ -460,7 +468,7 @@
                             <table class="table-dark">
                                 <thead>
                                     <tr>
-                                        <th scope="col">PrimaryDecision/SecondaryDecision/PublicOpinion</th>
+                                        <th scope="col">PrimaryAttitude/SecondaryAttitude</th>
                                         <th scope="col">Attitude</th>
                                     </tr>
                                 </thead>
@@ -476,7 +484,7 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">Context</th>
-                                        <th scope="col">Background</th>
+                                        <th scope="col">BackgroundKnowledge</th>
                                     </tr>
                                 </thead>
                                 <tbody>
