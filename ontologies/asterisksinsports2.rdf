@@ -34,20 +34,32 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#alterates1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#alterates1">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ControversyType"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
+        <rdfs:label>alterates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#alterates2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#alterates2">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+        <rdfs:label>alterates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    
     <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#characterisedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#characterisedBy">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#comesFrom -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#comesFrom">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Actors"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Provenance"/>
     </owl:ObjectProperty>
     
 
@@ -66,7 +78,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#determines">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Public_opinion"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
     </owl:ObjectProperty>
     
@@ -94,10 +105,18 @@
     <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#hasAttitude -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#hasAttitude">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Actors"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Public_opinion"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#hasAttitudeShift -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#hasAttitude">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
     </owl:ObjectProperty>
     
 
@@ -105,7 +124,7 @@
     <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#hasViewpoint -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#hasViewpoint">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Actors"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
     </owl:ObjectProperty>
     
@@ -116,7 +135,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#influences">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Public_opinion"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
     </owl:ObjectProperty>
     
@@ -176,11 +194,22 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#towards -->
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#towards1 -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#towards">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#towards1">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <rdfs:label>towards</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#towards2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#towards2">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Controversy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <rdfs:label>towards</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -242,13 +271,13 @@
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Background -->
+    <!-- http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#BackgroundKnowledge -->
 
-    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Background">
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#BackgroundKnowledge">
         <rdfs:comment>The factors that inform the decision or opinion of an Actor. 
 
 They can be cultural, technological, historical, social, political, or economic.</rdfs:comment>
-        <rdfs:label>Background</rdfs:label>
+        <rdfs:label>Background knowledge</rdfs:label>
     </owl:Class>
     
 
@@ -256,7 +285,7 @@ They can be cultural, technological, historical, social, political, or economic.
     <!-- http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#CognitivePerspectivization -->
 
     <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#CognitivePerspectivization">
-        <rdfs:label>Cut</rdfs:label>
+        <rdfs:label>Cognitive perspectivization</rdfs:label>
         <rdfs:label>Represents the moment where and the motivations for Actors change an Attitude.</rdfs:label>
     </owl:Class>
     
@@ -287,15 +316,6 @@ They can be cultural, technological, historical, social, political, or economic.
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Actors -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Actors">
-        <rdfs:comment>Representation of both participants and non-participants in a sporting event.</rdfs:comment>
-        <rdfs:label>Actors</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift">
@@ -309,7 +329,7 @@ They can be cultural, technological, historical, social, political, or economic.
     <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Background"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#BackgroundKnowledge"/>
         <rdfs:comment>Represents context and a plethora of external factors (e.g. media coverage, personal knowledge, cultural and moral values) influencing outlooks on a sporting achievement.</rdfs:comment>
         <rdfs:label>Context</rdfs:label>
     </owl:Class>
@@ -378,7 +398,6 @@ They can be cultural, technological, historical, social, political, or economic.
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody">
         <owl:equivalentClass rdf:resource="https://sportschema.org/ontologies/main/GoverningBody"/>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#NonParticipant"/>
         <rdfs:comment>Represents the governing body, under whose auspices the event was run, in which an achievement has been made in.</rdfs:comment>
         <rdfs:label>Governing body</rdfs:label>
     </owl:Class>
@@ -390,17 +409,6 @@ They can be cultural, technological, historical, social, political, or economic.
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location">
         <rdfs:comment>Represents the singular physical location (if possible), or a broader geographical context, where an Achievement has taken place.</rdfs:comment>
         <rdfs:label>Location</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#NonParticipant -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#NonParticipant">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Actors"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Participant"/>
-        <rdfs:comment>It represents people who do not participate directly in sporting events, such as fans, national governments, and the press.</rdfs:comment>
-        <rdfs:label>Non-participant</rdfs:label>
     </owl:Class>
     
 
@@ -419,7 +427,6 @@ They can be cultural, technological, historical, social, political, or economic.
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Participant">
         <owl:equivalentClass rdf:resource="https://sportschema.org/ontologies/main/Agent"/>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Actors"/>
         <rdfs:comment>Representation of a specific sportsperson, or a group of sportspeople participating in a club or representing their nation in a sporting competition.</rdfs:comment>
         <rdfs:label>Participant</rdfs:label>
     </owl:Class>
@@ -433,25 +440,6 @@ They can be cultural, technological, historical, social, political, or economic.
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
         <rdfs:comment>The primary decision of an Actor, in regards to some Achievement.</rdfs:comment>
         <rdfs:label>Primary decision</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Provenance -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Provenance">
-        <rdfs:comment>Represents the place, from which a person comes from, either a participant, or a non-participant.</rdfs:comment>
-        <rdfs:label>Provenance</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Public_opinion -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Public_opinion">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Attitude"/>
-        <rdfs:comment>Manifestation of an Actor about the results of a Achievement.</rdfs:comment>
-        <rdfs:label>Public opinion</rdfs:label>
     </owl:Class>
     
 
