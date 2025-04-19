@@ -33,15 +33,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#comesFrom -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#comesFrom">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Actors"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Provenance"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#createdBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#createdBy">
@@ -172,15 +163,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Actors -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Actors">
-        <rdfs:comment>Representation of both participants and non-participants in a sporting event.</rdfs:comment>
-        <rdfs:label>Actors</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#ContextualFactors -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ContextualFactors">
@@ -256,18 +238,7 @@
         <rdfs:comment>Represents the singular physical location (if possible), or a broader geographical context, where an Achievement has taken place.</rdfs:comment>
         <rdfs:label>Location</rdfs:label>
     </owl:Class>
-    
 
-
-    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#NonParticipant -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#NonParticipant">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Actors"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Participant"/>
-        <rdfs:comment>Represents people not directly participating in the sporting events, such as fans.</rdfs:comment>
-        <rdfs:label>Non-participant</rdfs:label>
-    </owl:Class>
-    
 
 
     <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Officiating -->
@@ -287,15 +258,6 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Actors"/>
         <rdfs:comment>Representation of a specific sportsperson, or a group of sportspeople participating in a club or representing their nation in a sporting competition.</rdfs:comment>
         <rdfs:label>Participant</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Provenance -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Provenance">
-        <rdfs:comment>Represents the provenance of a person, either a participant or a non-participant.</rdfs:comment>
-        <rdfs:label>Provenance</rdfs:label>
     </owl:Class>
     
 
@@ -336,12 +298,6 @@
         <rdfs:comment>Represents the timeframe, when an Achievement has taken place.</rdfs:comment>
         <rdfs:label>Time period</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- https://sportschema.org/ontologies/main/Agent -->
-
-    <owl:Class rdf:about="https://sportschema.org/ontologies/main/Agent"/>
     
 
 
