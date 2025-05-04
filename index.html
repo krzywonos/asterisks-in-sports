@@ -417,17 +417,25 @@
                                 PREFIX time: &lt;https://www.w3.org/2006/time#&gt;
                                 PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
                             </pre>
-                            <p><b>What factors lead to changes in attitude towards a controversial sporting achievements, e.g. Bjarne Riis' 1996 TdF win?</b></p>
+                            <p><b>What factors lead to changes in attitude towards a controversial sporting achievements, e.g. Christine Mboma's 200m silver medal at the 2020 Tokyo Olympics?</b></p>
                             <pre>
-                                SELECT ?attitudeShift ?viewpoint ?context
+                                PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                                PREFIX ais: <http://www.semanticweb.org/ontologies/2024/asterisksinsports#>
+                                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                                
+                                SELECT DISTINCT ?achievementLabel ?controversyLabel ?viewpointLabel ?contextLabel
                                 WHERE {
-                                    ?person ais:hasViewpoint ?viewpoint.
-                                    ?viewpoint ais:characterisedBy ?attitudeShift.
-                                    ?viewpoint ais:determines ais:secondaryAttitude.
-                                    ?viewpoint ais:towards ?achievement.
-                                    ?viewpoint ais:isInfluenced ?context.
-                                    ?context ais:influences ais:secondaryAttitude.
-                                    ?achievement ais:named "100m women's world record"^^xsd:string.
+                                  ?achievement ais:miredIn ?controversy .
+                                  ?achievement ais:underAuspicesOf ?governingBody .
+                                  ?governingBody ais:hasViewpoint ?viewpoint .
+                                  ?governingBody ais:hasAttitudeShift ?attitudeShift .
+                                  ?viewpoint ais:isInfluenced ?context . 
+                                  ?achievement rdfs:label ?achievementLabel .
+                                  ?controversy rdfs:label ?controversyLabel .
+                                  ?viewpoint rdfs:label ?viewpointLabel .
+                                  ?context rdfs:label ?contextLabel .
+                                  ?attitudeShift rdfs:label ?attitudeShiftLabel .
+                                  FILTER(CONTAINS(?achievementLabel, "200-metres (Athletics)"))
                                 }
                             </pre>
                             <h5>2.2.2 - New classes and properties</h5>
