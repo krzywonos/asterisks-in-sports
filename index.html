@@ -249,7 +249,6 @@
                             <p>The competency questions are provided with corresponding SPARQL queries:</p>
                             <p><b>What are some recent examples of sporting controversies?</b></p>
                             <pre>
-                                PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
                                 PREFIX ais: <http://www.semanticweb.org/ontologies/2024/asterisksinsports#>
                                 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
@@ -264,59 +263,94 @@
                                   FILTER ( xsd:integer(SUBSTR(STR(?timePeriodLabel), 1, 4)) > 2000 )
                                 }
                             </pre>
-                            <p><b>What examples of controversies do we know happened in a specific sport, e.g. ski jumping?</b></p>
+                            <p><b>What examples of controversies do we know happened in a specific sport, e.g. soccer?</b></p>
                             <pre>
-                                SELECT ?achievement ?controversyType
+                                PREFIX ais: <http://www.semanticweb.org/ontologies/2024/asterisksinsports#>
+                                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                                
+                                SELECT ?achievementLabel ?controversyLabel
                                 WHERE {
-                                    ?achievement ais:miredIn ?controversyType.
-                                    ?achievement ais:achievedInSport ?sport.
-                                    ?sport ais:named "Ski jumping"^^xsd:string.
+                                  ?achievement ais:miredIn ?controversy .
+                                  ?achievement ais:achievedInSport ?sport .
+                                  ?achievement rdfs:label ?achievementLabel .
+                                  ?controversy rdfs:label ?controversyLabel .
+                                  ?sport rdfs:label "Soccer" .
                                 }
                             </pre>
                             <p><b>What are some sportspeople who had their titles challenged because of doping?</b></p>
                             <pre>
-                                SELECT ?achievement ?controversyType ?sportsperson
+                                PREFIX ais: <http://www.semanticweb.org/ontologies/2024/asterisksinsports#>
+                                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                                
+                                SELECT ?achievementLabel ?controversyLabel ?participantLabel
                                 WHERE {
-                                    ?achievement ais:miredIn ?controversyType.
-                                    ?controversyType ais:named "Doping"^^xsd:string.
-                                    ?achievement ais:hadParticipant ?sportsperson.
+                                  ?achievement ais:miredIn ?controversy .
+                                  ?achievement ais:hadParticipant ?participant .
+                                  ?achievement rdfs:label ?achievementLabel .
+                                  ?controversy rdfs:label ?controversyLabel .
+                                  ?participant rdfs:label ?participantLabel .
                                 }
                             </pre>
                             <p><b>What controversies arose in competitions organised by the Polish Football Association?</b></p>
                             <pre>
-                                SELECT ?achievement ?controversyType
+                                PREFIX ais: <http://www.semanticweb.org/ontologies/2024/asterisksinsports#>
+                                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                                
+                                SELECT ?achievementLabel ?controversyLabel
                                 WHERE {
-                                    ?achievement ais:miredIn ?controversyType.
-                                    ?achievement ais:achievedInSport ?sport.
-                                    ?sport ais:organisedBy ?governingBody.
-                                    ?governingBody ais:named "PZPN"^^xsd:string.
+                                  ?achievement ais:miredIn ?controversy .
+                                  ?achievement ais:underAuspicesOf ?governingBody .
+                                  ?achievement rdfs:label ?achievementLabel .
+                                  ?controversy rdfs:label ?controversyLabel .
+                                  ?governingBody rdfs:label ?governingBodyLabel .
+                                  FILTER (CONTAINS(?governingBodyLabel, "PZPN"))
                                 }
                             </pre>
                             <p><b>What sporting controversies arose in the United States?</b></p>
                             <pre>
-                                SELECT ?achievement ?controversyType
+                                PREFIX ais: <http://www.semanticweb.org/ontologies/2024/asterisksinsports#>
+                                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                                
+                                SELECT ?achievementLabel ?controversyLabel ?locationLabel
                                 WHERE {
-                                    ?achievement ais:miredIn ?controversyType.
-                                    ?achievement ais:locatedIn ?location.
-                                    ?location ais:named "United States"^^xsd:string.
+                                  ?achievement ais:miredIn ?controversy .
+                                  ?achievement ais:locatedIn ?location .
+                                  ?achievement rdfs:label ?achievementLabel .
+                                  ?controversy rdfs:label ?controversyLabel .
+                                  ?location rdfs:label ?locationLabel . 
+                                  FILTER (CONTAINS(?governingBodyLabel, "America"))
                                 }
                             </pre>
                             <p><b>Are technological advancements leading to controversies in multiple sports?</b></p>
                             <pre>
-                                SELECT DISTINCT ?sport ?achievement
+                                PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                                PREFIX ais: <http://www.semanticweb.org/ontologies/2024/asterisksinsports#>
+                                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                                
+                                SELECT ?achievementLabel ?controversyLabel ?sportLabel
                                 WHERE {
-                                    ?achievement ais:miredIn ?controversyType.
-                                    ?controversyType ais:named "Technological advancements".
-                                    ?achievement? ais:achievedInSport ?sport.
+                                  ?achievement ais:miredIn ?controversy .
+                                  ?achievement ais:achievedInSport ?sport.
+                                  ?achievement rdfs:label ?achievementLabel .
+                                  ?controversy rdfs:label ?controversyLabel .
+                                  ?sport rdfs:label ?sportLabel . 
+                                  ?controversy rdf:type ais:Technology .
                                 }
                             </pre>
                             <p><b>Is an athlete's gender leading to controversies regarding their sporting achievements a modern phenomenon?</b></p>
                             <pre>
-                                SELECT ?achievement ?controversyType ?timePeriod
+                                PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                                PREFIX ais: <http://www.semanticweb.org/ontologies/2024/asterisksinsports#>
+                                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                                
+                                SELECT ?achievementLabel ?controversyLabel ?timePeriodLabel
                                 WHERE {
-                                    ?achievement ais:miredIn ?controversyType.
-                                    ?controversyType ais:named "Gender"^^xsd:string.
-                                    ?achievement ais:during ?timePeriod.
+                                  ?achievement ais:miredIn ?controversy .
+                                  ?achievement ais:during ?timePeriod .
+                                  ?achievement rdfs:label ?achievementLabel .
+                                  ?controversy rdfs:label ?controversyLabel .
+                                  ?timePeriod rdfs:label ?timePeriodLabel . 
+                                  ?controversy rdf:type ais:Gender .
                                 }
                             </pre>
                             <h5>2.1.2 - Classes and properties</h5>
