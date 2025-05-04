@@ -245,22 +245,23 @@
                         <div id="item2-1">
                             <h4>2.1 - First-level modelling</h4>
                             <h5>2.1.1 - Competency questions</h5>
-                            <p>Development of the basic ontology started with preparing some competency questions, which we would expect to be answered. Prefixes added to SPARQL queries:</p>
-                            <pre>
-                                PREFIX ais: &lt;http://www.semanticweb.org/ontologies/2024/asterisksinsports&gt;
-                                PREFIX sports: &lt;https://sportschema.org/ontologies/main/&gt;
-                                PREFIX dct: &lt;http://purl.org/dc/terms/&gt;
-                                PREFIX time: &lt;https://www.w3.org/2006/time#&gt;
-                                PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
-                            </pre>
+                            <p>Development of the basic ontology started with preparing some competency questions, which we would expect to be answered.</p>
                             <p>The competency questions are provided with corresponding SPARQL queries:</p>
                             <p><b>What are some recent examples of sporting controversies?</b></p>
                             <pre>
-                                SELECT ?achievement ?controversyType
+                                PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                                PREFIX ais: <http://www.semanticweb.org/ontologies/2024/asterisksinsports#>
+                                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+                                SELECT ?achievementLabel ?controversyLabel ?timePeriodLabel
                                 WHERE {
-                                    ?achievement ais:miredIn ?controversyType.
-                                    ?achievement ais:during ?timePeriod.
-                                    ?timePeriod time:after "2000-01-01"^^xsd:date.
+                                  ?achievement ais:miredIn ?controversy .
+                                  ?achievement ais:during ?timePeriod .
+                                  ?achievement rdfs:label ?achievementLabel .
+                                  ?controversy rdfs:label ?controversyLabel .
+                                  ?timePeriod rdfs:label ?timePeriodLabel .
+                                  FILTER ( regex(STR(?timePeriodLabel), "^[0-9]{4}.*") )
+                                  FILTER ( xsd:integer(SUBSTR(STR(?timePeriodLabel), 1, 4)) > 2000 )
                                 }
                             </pre>
                             <p><b>What examples of controversies do we know happened in a specific sport, e.g. ski jumping?</b></p>
