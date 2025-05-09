@@ -1,0 +1,2338 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2024/asterisksinsports/"
+     xml:base="http://www.semanticweb.org/ontologies/2024/asterisksinsports/"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="https://www.w3.org/2006/time#"
+     xmlns:sports="https://sportschema.org/ontologies/main/"
+     xmlns:asterisksinsports="http://www.semanticweb.org/ontologies/2024/asterisksinsports#"
+     xmlns:perspectivisation="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#achievedInSport -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#achievedInSport">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Sport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#alterates1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#alterates1">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Controversy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
+        <rdfs:label>alterates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#alterates2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#alterates2">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+        <rdfs:label>alterates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#characterisedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#characterisedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#comingFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#comingFrom">
+        <rdfs:domain rdf:resource="https://sportschema.org/ontologies/main/Agent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#determines -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#determines">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#during -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#during">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimePeriod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#hadParticipant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#hadParticipant">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#participatedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#hasAttitude -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#hasAttitude">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#hasAttitudeShift -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#hasAttitudeShift">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#hasContext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#hasContext">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#hasViewpoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#hasViewpoint">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#influences -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#influences">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#isInfluenced -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#isInfluenced">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#locatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#locatedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#miredIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#miredIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#organisedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#organisedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Sport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#participatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#participatedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Participant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#playedInSport -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#playedInSport">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Participant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Sport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#towards1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#towards1">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <rdfs:label>towards</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#towards2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#towards2">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Controversy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <rdfs:label>towards</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#underAuspicesOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#underAuspicesOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/Location -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/Location">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Attitude -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Attitude">
+        <rdfs:label>Attitude</rdfs:label>
+        <rdfs:label>The behavior of an Actor towards the result of a competition.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#BackgroundKnowledge -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#BackgroundKnowledge">
+        <rdfs:comment>The factors that inform the decision or opinion of an Actor. 
+
+They can be cultural, technological, historical, social, political, or economic.</rdfs:comment>
+        <rdfs:label>Background knowledge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#CognitivePerspectivization -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#CognitivePerspectivization">
+        <rdfs:label>Cognitive perspectivization</rdfs:label>
+        <rdfs:label>Represents the moment where and the motivations for Actors change an Attitude.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Eventuality -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Eventuality"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Lens -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Lens">
+        <rdfs:comment>Represent all the factors that inform the decision or opinion making of an Actor.</rdfs:comment>
+        <rdfs:label>Lens</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Eventuality"/>
+        <rdfs:comment>Represents a sporting accomplishment made by a sportsperson or a group of sportspeople. This ranges from winning championship titles, through outstanding performances and breaking records to just qualifying to participate at a certain event.</rdfs:comment>
+        <rdfs:label>Achievement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#CognitivePerspectivization"/>
+        <rdfs:comment>Represents a personal shift of attitute regarding a sporting achievement.</rdfs:comment>
+        <rdfs:label>Attitude shift</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#BackgroundKnowledge"/>
+        <rdfs:comment>Represents context and a plethora of external factors (e.g. media coverage, personal knowledge, cultural and moral values) influencing outlooks on a sporting achievement.</rdfs:comment>
+        <rdfs:label>Context</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#ContextualFactors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ContextualFactors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Controversy"/>
+        <rdfs:comment>Represents the cases, where the legitimacy of an achievement has been challenged due to factors outside of the actual sporting results.</rdfs:comment>
+        <rdfs:label>Contextual factors</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Controversy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Controversy">
+        <rdfs:comment>Represents the type of controversy surrounding a sporting achievement.</rdfs:comment>
+        <rdfs:label>Controversy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Doping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Doping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Controversy"/>
+        <rdfs:comment>Represents cases, where a sporting achievement has been surrounded by controversiues due to improving performance through illicit chemicals.</rdfs:comment>
+        <rdfs:label>Doping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Ethics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Ethics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Controversy"/>
+        <rdfs:comment>Represents cases, where a sporting achievement has been surrounded by controversies due to ethical considerations.</rdfs:comment>
+        <rdfs:label>Ethics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Gender -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Gender">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Controversy"/>
+        <rdfs:comment>Represents cases, where a sporting achievement has been surrounded by controversies due to athletes gender/hormone levels.</rdfs:comment>
+        <rdfs:label>Gender issues</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody">
+        <owl:equivalentClass rdf:resource="https://sportschema.org/ontologies/main/GoverningBody"/>
+        <rdfs:comment>Represents the governing body, under whose auspices the event was run, in which an achievement has been made in.</rdfs:comment>
+        <rdfs:label>Governing body</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location">
+        <rdfs:comment>Represents the singular physical location (if possible), or a broader geographical context, where an Achievement has taken place.</rdfs:comment>
+        <rdfs:label>Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Officiating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Officiating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Controversy"/>
+        <rdfs:comment>Represents cases, where a sporting achievement has been surrounded by controversies due to officiating mistakes and/or corrupt officials.</rdfs:comment>
+        <rdfs:label>Officiating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Participant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Participant">
+        <owl:equivalentClass rdf:resource="https://sportschema.org/ontologies/main/Agent"/>
+        <rdfs:comment>Representation of a specific sportsperson, or a group of sportspeople participating in a club or representing their nation in a sporting competition.</rdfs:comment>
+        <rdfs:label>Participant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Attitude"/>
+        <rdfs:comment>The primary decision of an Actor, in regards to some Achievement.</rdfs:comment>
+        <rdfs:label>Primary decision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#RuleViolation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#RuleViolation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Controversy"/>
+        <rdfs:comment>Represents cases, where a sporting achievement has been surrounded by controversies due to violating the ruleset of the sport or competition.</rdfs:comment>
+        <rdfs:label>Rule violation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Attitude"/>
+        <rdfs:comment>The secondary decision of an Actor, towards a certain Achievement, coming due to a change of viewpoint.</rdfs:comment>
+        <rdfs:label>Secondary decision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Sport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Sport">
+        <rdfs:comment>Represents the sport, in which an Achievement has been made in.</rdfs:comment>
+        <rdfs:label>Sport</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Technology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Technology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Controversy"/>
+        <rdfs:comment>Represents cases, where a sporting achievement has been surrounded by controversies due to technological advancements impacting the result.</rdfs:comment>
+        <rdfs:label>Technological advancements</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimePeriod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimePeriod">
+        <owl:equivalentClass rdf:resource="https://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:comment>Represents the timeframe, when an Achievement has taken place.</rdfs:comment>
+        <rdfs:label>Time period</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Lens"/>
+        <rdfs:comment>Represents a perspective of an individual towards a sporting achievement.</rdfs:comment>
+        <rdfs:label>Viewpoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://sportschema.org/ontologies/main/Agent -->
+
+    <owl:Class rdf:about="https://sportschema.org/ontologies/main/Agent">
+        <rdfs:comment>The person or institution that competes on a competition.</rdfs:comment>
+        <rdfs:label>Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://sportschema.org/ontologies/main/GoverningBody -->
+
+    <owl:Class rdf:about="https://sportschema.org/ontologies/main/GoverningBody"/>
+    
+
+
+    <!-- https://www.w3.org/2006/time#TemporalEntity -->
+
+    <owl:Class rdf:about="https://www.w3.org/2006/time#TemporalEntity">
+        <rdfs:label>TemporalEntity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#American_football -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#American_football">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Sport"/>
+        <asterisksinsports:organisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#National_Football_League_NFL"/>
+        <rdfs:label>American football</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Argentina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Argentina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Athletics -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Athletics">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Sport"/>
+        <asterisksinsports:organisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Olympic_Committee_IOC"/>
+        <asterisksinsports:organisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Paralympic_Committee_IPC"/>
+        <rdfs:label>Athletics</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Chelsea09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Chelsea09">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
+        <rdfs:label>Barcelona won the match</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Christine12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Christine12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
+        <rdfs:label>The athlete would participate in the 400m, 200m, 100m, and 4x100m competitions; however, the Olympics were postponed from 2020 to 2021 due to the COVID-19 pandemic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Diego86 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Diego86">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
+        <rdfs:label>The referees did not have a clear view of the play and allowed the goal to stand. Argentina advanced to the semifinals and subsequently won the Cup.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Juventus05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Juventus05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
+        <rdfs:label>Juventus was the champion of Serie A</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Lance03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Lance03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
+        <rdfs:label>The cyclist won multiple titles and gained significant prestige, earning the nickname &apos;Tour de Lance&apos;</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Legia93 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Legia93">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
+        <rdfs:label>Legia won their match against Wisła Kraków 6-0, while ŁKS won their match against Olimpia Poznań 7:1, and as such, Legia won the title.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Manchester10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Manchester10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
+        <rdfs:label>Manchester City finished outside the podium in the 2010 Premier League tournament</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Mariya12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Mariya12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
+        <rdfs:label>Savinova won the 800m, taking the gold medal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Miami12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Miami12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
+        <rdfs:label>The start of the games was postponed from October to December, causing doubts among the fans</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Michael08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Michael08">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
+        <rdfs:label>Michael Phelps won 8 gold medals, breaking the record for the most gold medals won in a single Olympic Games</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1New09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1New09">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
+        <rdfs:label>The victory of the New Orleans Saints in the 2009 competition and strong placements in the following two championships</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Oscar08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Oscar08">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
+        <rdfs:label>IAAF and IOC in 2008 ruled Pistorius&apos;s prostheses ineligible for use in competitions conducted under the IAAF rules, including the 2008 Summer Olympic Games</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Quinn21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Quinn21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
+        <rdfs:label>Quinn was not permitted to compete in the 2020 Olympics as a non-binary athlete. The existing rules required athletes to compete according to their assigned gender at birth, but the competition was postponed due to the COVID-19 pandemic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Tonya94 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Tonya94">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#PrimaryAttitude"/>
+        <rdfs:label>Tonya Harding won first place at the championship classfying herself to the Olympics</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Chelsea09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Chelsea09">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
+        <rdfs:label>UEFA upheld Barcelona&apos;s victory, fined Chelsea for inappropriate conduct, and banned players from subsequent matches. The referee admitted to officiating mistakes in 2018.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Christine12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Christine12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
+        <rdfs:label>Mboma was not allowed to compete under the female classification in events between 400 metres and one mile. She won a Silver Medal in 200 metres</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Diego86 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Diego86">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
+        <rdfs:label>Argentina retained its title despite the controversy surrounding the match</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Juventus05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Juventus05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
+        <rdfs:label>Juventus lost the title, which remained without a defined winner, and was relegated to Serie B, along with paying fines and facing the banishment of high-ranking officials from the club</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Lance03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Lance03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
+        <rdfs:label>Loss of all his Tour de France titles and a ban from competitions held by the International Cycling Union</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Legia93 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Legia93">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
+        <rdfs:label>UEFA forced the Polish FA to investigate the matter. After a month and a half of deliberating, despite no concrete evidence, the results of the two matches were nullified by a vote of FA officials. One of the FA officials justified this as &quot;it was seen by the whole country&quot;. One of Wisła&apos;s players admitted to selling the game against Legia in 2021.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Manchester10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Manchester10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
+        <rdfs:label>Investigations are ongoing, but potential sanctions proposed by the Premier League include a points deduction, a fine, or expulsion from the league</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Mariya12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Mariya12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
+        <rdfs:label>The IOC and IAAF charged her with doping violations in 2015. In 2017 the Court of Arbitration for Sport upheld the four-year ban for Savinova, nullified her results from July 2010 to August 2013, and stripped her of the medals she was awarded during that time, including prize money and appearance fees.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Miami12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Miami12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
+        <rdfs:label>Miami Heat won the NBA championship.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Michael08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Michael08">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
+        <rdfs:label>Michael Phelps kept his medals and broke his own records at the following Olympics in 2012, this time without the use of the suit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2New09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2New09">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
+        <rdfs:label>Sanctions to New Olrleans Saints coaches and front-office personnel for their roles in the scandal. Mass suspensions, federal court hearings, litigation, and a fine of $500,000</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Oscar08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Oscar08">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
+        <rdfs:label>He won three gold medals at the Paralympics</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Quinn21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Quinn21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
+        <rdfs:label>Quinn was allowed to compete in the team according to gender identity, helping Canada win the gold medal in women’s soccer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Tonya94 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Tonya94">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#SecondaryAttitude"/>
+        <rdfs:label>Suspension of the title, ineligibility for Olympic participation, and a permanent ban from the national figure skating championships</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftChelsea09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftChelsea09">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointChelsea09"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextChelsea09"/>
+        <rdfs:label>At the end of the game, both Chelsea fans and players were outraged by the officiating. Some players insulted Øvrebø, and Didier Drogba had to be physically restrained to prevent him from attacking the referee. Chelsea requested  for a review of the match</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftChistine12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftChistine12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointChristine12"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointChristine12"/>
+        <rdfs:label>IOC 2021 Guidelines defined the regulations on testosterone levels for athletes with XY disorders of sex development.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftDiego86 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftDiego86">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointDiego86"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextDiego86"/>
+        <rdfs:label>The controversy after the match, along with the subsequent reuse of the &quot;Hand of God&quot; in the 1990 World Cup against the USSR, led FIFA to change the refereeing rules, creating what is known as &quot;Fair Play&quot;</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftJuventus05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftJuventus05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointJuventus05"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextJuventus05"/>
+        <rdfs:label>In May 2006, telephone tappings showed relations between clubs&apos; executives and referee organizations during the football seasons of 2004–05 and 2005–06, being accused of selecting favourable referees</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftLance03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftLance03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointLance03"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextLance03"/>
+        <rdfs:label>Detection of EPO (erythropoietin). The analysis, conducted by the National Anti-Doping Laboratory (LNDD) in Châtenay-Malabry (France), was based on frozen urine and blood samples. The report only presented the detection of the substance in its analysis in 2012</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftLegia93 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftLegia93">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointLegia93"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextLegia93"/>
+        <rdfs:label>The coincidence of two unusual results in matches played simultaneously led to the events being nicknamed the &quot;Sunday of Miracles&quot; and cast doubt on the legitimacy of the games. Cases of fans shouting &quot;share the bribe&quot; were directed toward Wisła players. Additionally, the commentator of this match said he thinks the match was sold during a live broadcast.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftManchester10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftManchester10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointManchester10"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextManchester10"/>
+        <rdfs:label>German website Der Spiegel published the Football Leaks documents containing evidence of potential Manchester&apos;s financial violations</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftMariya12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftMariya12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointMariya12"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextMariya12"/>
+        <rdfs:label>Savinova admitted to injecting testosterone and using the anabolic steroid oxandrolone  in a documentary aired on German TV in 2014</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftMiami12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftMiami12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointMiami12"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextMiami12"/>
+        <rdfs:label>NBA and players’ labor union were unable to agree on a new collective bargaining agreement, reducing the number of regular-season games from 82 to 66</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftMichael08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftMichael08">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointMichael08"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextMichael08"/>
+        <rdfs:label>The International Olympic Committee received numerous inquiries regarding the use of technological swimwear and the legitimacy of the resulting victories. As a result, the use of the swimsuit was banned in 2009</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftNew09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftNew09">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointNew09"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextNew09"/>
+        <rdfs:label>ESPN&apos;s 2012 report, referred to by the NFL as irrefutable proof of a pay-for-performance scheme, revealed that from 2009 to 2012, players were encouraged to injure opponents during games</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftOscar08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftOscar08">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointOscar08"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextOscar08"/>
+        <rdfs:label>The athlete appealed the decision to the Court of Arbitration for Sport (CAS), which heard his appeal and reversed the decision made by the IAAF. The reversal was ratified by the International Olympic Committee, allowing the athlete to compete with the prosthetics</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftQuinn21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftQuinn21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointQuinn21"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextQuinn21"/>
+        <rdfs:label>IOC 2021 Guidelines allowed athletes to compete in events according to their gender identity, without the need for surgery, as long as their testosterone levels remained below a certain threshold</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftTonya94 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftTonya94">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShift"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointTonya94"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextTonya94"/>
+        <rdfs:label>Harding confessed paticipation in the attack on Nancy Kerrigan under FBI interrogation 10 days later</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Basketball -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Basketball">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Sport"/>
+        <asterisksinsports:organisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#National_Basketball_Association&apos;s_NBA"/>
+        <rdfs:label>Basketball</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Canada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Canada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#China -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#China">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Christine_Mboma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Christine_Mboma">
+        <rdf:type rdf:resource="https://sportschema.org/ontologies/main/Agent"/>
+        <asterisksinsports:comingFrom rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Namibia"/>
+        <asterisksinsports:participatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#XXXII_Summer_Olympiad__200_metres"/>
+        <asterisksinsports:playedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Athletics"/>
+        <rdfs:label>Christine Mboma</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Cyclism -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Cyclism">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Sport"/>
+        <asterisksinsports:organisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Ciclist_Union_UCI"/>
+        <rdfs:label>Cyclism</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Diego_Maradona -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Diego_Maradona">
+        <rdf:type rdf:resource="https://sportschema.org/ontologies/main/Agent"/>
+        <asterisksinsports:comingFrom rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Argentina"/>
+        <asterisksinsports:participatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#13th_FIFA_World_Cup"/>
+        <asterisksinsports:playedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Soccer"/>
+        <rdfs:label>Diego Maradona</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#England -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#England">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Figure_Skating -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Figure_Skating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Sport"/>
+        <asterisksinsports:organisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#U.S._Figure_Skating_Association_USFSA"/>
+        <rdfs:label>Figure Skating</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Football_Association_FA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Football_Association_FA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Manchester10"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Manchester10"/>
+        <asterisksinsports:hasAttitudeShift rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftManchester10"/>
+        <asterisksinsports:hasViewpoint rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointManchester10"/>
+        <rdfs:label>FA - Football Association</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#France -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#France">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Ciclist_Union_UCI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Ciclist_Union_UCI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Lance03"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Lance03"/>
+        <asterisksinsports:hasAttitudeShift rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftLance03"/>
+        <asterisksinsports:hasViewpoint rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointLance03"/>
+        <rdfs:label>UCI - International Cycling Union</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Federation_of_Association_Football_FIFA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Federation_of_Association_Football_FIFA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Diego86"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Diego86"/>
+        <asterisksinsports:hasAttitudeShift rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftDiego86"/>
+        <asterisksinsports:hasViewpoint rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointDiego86"/>
+        <rdfs:label>FIFA - International Federation of Association Football</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Olympic_Committee_IOC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Olympic_Committee_IOC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Christine12"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Mariya12"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Michael08"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Quinn21"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Christine12"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Mariya12"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Michael08"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Quinn21"/>
+        <asterisksinsports:hasAttitudeShift rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftChistine12"/>
+        <asterisksinsports:hasAttitudeShift rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftMariya12"/>
+        <asterisksinsports:hasAttitudeShift rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftMichael08"/>
+        <asterisksinsports:hasAttitudeShift rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftQuinn21"/>
+        <asterisksinsports:hasViewpoint rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointChristine12"/>
+        <asterisksinsports:hasViewpoint rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointMariya12"/>
+        <asterisksinsports:hasViewpoint rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointMichael08"/>
+        <asterisksinsports:hasViewpoint rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointQuinn21"/>
+        <rdfs:label>IOC - International Olympic Committee</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Paralympic_Committee_IPC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Paralympic_Committee_IPC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Oscar08"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Oscar08"/>
+        <asterisksinsports:hasAttitudeShift rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftOscar08"/>
+        <asterisksinsports:hasViewpoint rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointOscar08"/>
+        <rdfs:label>IPC - International Paralympic Committee</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Italian_Football_Federation_FIGC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Italian_Football_Federation_FIGC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Juventus05"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Juventus05"/>
+        <asterisksinsports:hasAttitudeShift rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftJuventus05"/>
+        <asterisksinsports:hasViewpoint rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointJuventus05"/>
+        <rdfs:label>FIGC - Italian Football Federation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Italy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Italy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Japan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Japan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Juventus_team -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Juventus_team">
+        <rdf:type rdf:resource="https://sportschema.org/ontologies/main/Agent"/>
+        <asterisksinsports:comingFrom rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Italy"/>
+        <asterisksinsports:participatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#2004/05_Serie_A"/>
+        <asterisksinsports:playedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Soccer"/>
+        <rdfs:label>Juventus team</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Lance_Armstrong -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Lance_Armstrong">
+        <rdf:type rdf:resource="https://sportschema.org/ontologies/main/Agent"/>
+        <asterisksinsports:comingFrom rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#United_States_of_America"/>
+        <asterisksinsports:participatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Tour_de_France_90"/>
+        <asterisksinsports:playedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Cyclism"/>
+        <rdfs:label>Lance Armstrong</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Manchester_City_team -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Manchester_City_team">
+        <rdf:type rdf:resource="https://sportschema.org/ontologies/main/Agent"/>
+        <asterisksinsports:comingFrom rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#England"/>
+        <asterisksinsports:participatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#18th_Premier_League"/>
+        <asterisksinsports:playedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Soccer"/>
+        <rdfs:label>Manchester City team</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Mariya_Savinova -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Mariya_Savinova">
+        <rdf:type rdf:resource="https://sportschema.org/ontologies/main/Agent"/>
+        <asterisksinsports:comingFrom rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Russia"/>
+        <asterisksinsports:participatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#XXX_Summer_Olympiad_800_metres"/>
+        <asterisksinsports:playedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Athletics"/>
+        <rdfs:label>Mariya Savinova</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Mexico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Mexico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Miami_Heat_team -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Miami_Heat_team">
+        <rdf:type rdf:resource="https://sportschema.org/ontologies/main/Agent"/>
+        <asterisksinsports:comingFrom rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#United_States_of_America"/>
+        <asterisksinsports:participatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#2012_NBA_Finals"/>
+        <asterisksinsports:playedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Basketball"/>
+        <rdfs:label>Miami Heat team</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Michael_Phelps -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Michael_Phelps">
+        <rdf:type rdf:resource="https://sportschema.org/ontologies/main/Agent"/>
+        <asterisksinsports:comingFrom rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#United_States_of_America"/>
+        <asterisksinsports:participatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#XXIX_Summer_Olympiad_200-metre_butterfly"/>
+        <asterisksinsports:playedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Swimming"/>
+        <rdfs:label>Michael Phelps</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Namibia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Namibia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#National_Football_League_NFL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#National_Football_League_NFL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1New09"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2New09"/>
+        <asterisksinsports:hasAttitudeShift rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftNew09"/>
+        <asterisksinsports:hasViewpoint rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointNew09"/>
+        <rdfs:label>NFL - National Football League</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#New_Orleans_Saints_team -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#New_Orleans_Saints_team">
+        <rdf:type rdf:resource="https://sportschema.org/ontologies/main/Agent"/>
+        <asterisksinsports:comingFrom rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#United_States_of_America"/>
+        <asterisksinsports:participatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Super_Bowl_XLIV"/>
+        <asterisksinsports:playedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#American_football"/>
+        <rdfs:label>New Orleans Saints team</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Oscar_Pistorius -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Oscar_Pistorius">
+        <rdf:type rdf:resource="https://sportschema.org/ontologies/main/Agent"/>
+        <asterisksinsports:comingFrom rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#South_Africa"/>
+        <asterisksinsports:participatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#13th_Summer_Paralympiad_100_metres"/>
+        <asterisksinsports:playedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Athletics"/>
+        <rdfs:label>Oscar Pistorius</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Poland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Poland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Polish_Football_Association_PZPN -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Polish_Football_Association_PZPN">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Legia93"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Legia93"/>
+        <asterisksinsports:hasAttitudeShift rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftLegia93"/>
+        <asterisksinsports:hasViewpoint rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointLegia93"/>
+        <rdfs:label>PZPN - Polish Football Association</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Quinn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Quinn">
+        <rdf:type rdf:resource="https://sportschema.org/ontologies/main/Agent"/>
+        <asterisksinsports:comingFrom rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Canada"/>
+        <asterisksinsports:participatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#XXXII_Summer_Olympiad__football_tournament"/>
+        <asterisksinsports:playedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Soccer"/>
+        <rdfs:label>Quinn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Russia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Russia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Soccer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Soccer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Sport"/>
+        <asterisksinsports:organisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Football_Association_FA"/>
+        <asterisksinsports:organisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Federation_of_Association_Football_FIFA"/>
+        <asterisksinsports:organisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Olympic_Committee_IOC"/>
+        <asterisksinsports:organisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Italian_Football_Federation_FIGC"/>
+        <asterisksinsports:organisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Polish_Football_Association_PZPN"/>
+        <asterisksinsports:organisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Union_of_European_Football_Associations_UEFA"/>
+        <rdfs:label>Soccer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#South_Africa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#South_Africa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Spain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Spain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Super_Bowl_XLIV -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Super_Bowl_XLIV">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <asterisksinsports:achievedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#American_football"/>
+        <asterisksinsports:during rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeNew09"/>
+        <asterisksinsports:hadParticipant rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#New_Orleans_Saints_team"/>
+        <asterisksinsports:hasContext rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextNew09"/>
+        <asterisksinsports:locatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#United_States_of_America"/>
+        <asterisksinsports:miredIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyNew09"/>
+        <asterisksinsports:underAuspicesOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#National_Football_League_NFL"/>
+        <rdfs:label>Super Bowl XLIV</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Swimming -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Swimming">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Sport"/>
+        <asterisksinsports:organisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Olympic_Committee_IOC"/>
+        <rdfs:label>Swimming</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeChelsea09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeChelsea09">
+        <rdf:type rdf:resource="https://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:label>2009</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeChristine12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeChristine12">
+        <rdf:type rdf:resource="https://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:label>2021</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeDiego86 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeDiego86">
+        <rdf:type rdf:resource="https://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1986</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeJuventus05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeJuventus05">
+        <rdf:type rdf:resource="https://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:label>2004-2005</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeLance03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeLance03">
+        <rdf:type rdf:resource="https://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:label>2003</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeLegia93 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeLegia93">
+        <rdf:type rdf:resource="https://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:label>1992-1993</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeManchester10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeManchester10">
+        <rdf:type rdf:resource="https://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:label>2009-2010</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeMariya12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeMariya12">
+        <rdf:type rdf:resource="https://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:label>2012</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeMiami12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeMiami12">
+        <rdf:type rdf:resource="https://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:label>2011-2012</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeMichael08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeMichael08">
+        <rdf:type rdf:resource="https://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2008</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeNew09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeNew09">
+        <rdf:type rdf:resource="https://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:label>2009</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeOscar08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeOscar08">
+        <rdf:type rdf:resource="https://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2008</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeQuinn21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeQuinn21">
+        <rdf:type rdf:resource="https://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2021</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeTonya94 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeTonya94">
+        <rdf:type rdf:resource="https://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:label>1994</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Tonya_Harding -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Tonya_Harding">
+        <rdf:type rdf:resource="https://sportschema.org/ontologies/main/Agent"/>
+        <asterisksinsports:comingFrom rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#United_States_of_America"/>
+        <asterisksinsports:participatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#1994_U.S._Figure_Skating_Championships"/>
+        <asterisksinsports:playedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Figure_Skating"/>
+        <rdfs:label>Tonya Harding</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Tour_de_France_90 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Tour_de_France_90">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <asterisksinsports:achievedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Cyclism"/>
+        <asterisksinsports:during rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeLance03"/>
+        <asterisksinsports:hadParticipant rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Lance_Armstrong"/>
+        <asterisksinsports:hasContext rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextLance03"/>
+        <asterisksinsports:locatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#France"/>
+        <asterisksinsports:miredIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyLance03"/>
+        <asterisksinsports:underAuspicesOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Ciclist_Union_UCI"/>
+        <rdfs:label>Tour de France 90</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#U.S._Figure_Skating_Association_USFSA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#U.S._Figure_Skating_Association_USFSA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Tonya94"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Tonya94"/>
+        <asterisksinsports:hasAttitudeShift rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftTonya94"/>
+        <asterisksinsports:hasViewpoint rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointTonya94"/>
+        <rdfs:label>USFSA - U.S. Figure Skating Association</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Union_of_European_Football_Associations_UEFA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Union_of_European_Football_Associations_UEFA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Chelsea09"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Chelsea09"/>
+        <asterisksinsports:hasAttitudeShift rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftChelsea09"/>
+        <asterisksinsports:hasViewpoint rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointChelsea09"/>
+        <rdfs:label>UEFA - Union of European Football Associations</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#United_Kingdom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#United_Kingdom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#United_States_of_America -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#United_States_of_America">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointChelsea09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointChelsea09">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+        <asterisksinsports:characterisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftChelsea09"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Chelsea09"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Chelsea09"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextChelsea09"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#54th_UEFA_Champions_League_semifinals"/>
+        <rdfs:label>Governing Body viewpoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointChristine12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointChristine12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+        <asterisksinsports:characterisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftChistine12"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Christine12"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Christine12"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextChristine12"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#XXXII_Summer_Olympiad__200_metres"/>
+        <rdfs:label>Governing Body viewpoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointDiego86 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointDiego86">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+        <asterisksinsports:characterisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftDiego86"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Diego86"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Diego86"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextDiego86"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#13th_FIFA_World_Cup"/>
+        <rdfs:label>Governing Body viewpoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointJuventus05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointJuventus05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+        <asterisksinsports:characterisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftJuventus05"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Juventus05"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Juventus05"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextJuventus05"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#2004/05_Serie_A"/>
+        <rdfs:label>Governing Body viewpoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointLance03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointLance03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+        <asterisksinsports:characterisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftLance03"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Lance03"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Lance03"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextLance03"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Tour_de_France_90"/>
+        <rdfs:label>Governing Body viewpoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointLegia93 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointLegia93">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+        <asterisksinsports:characterisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftLegia93"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Legia93"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Legia93"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextLegia93"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#1992/93_Ekstraklasa"/>
+        <rdfs:label>Governing Body viewpoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointManchester10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointManchester10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+        <asterisksinsports:characterisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftManchester10"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Manchester10"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Manchester10"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextManchester10"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#18th_Premier_League"/>
+        <rdfs:label>Governing Body viewpoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointMariya12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointMariya12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+        <asterisksinsports:characterisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftMariya12"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Mariya12"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Mariya12"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextMariya12"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#XXX_Summer_Olympiad_800_metres"/>
+        <rdfs:label>Governing Body viewpoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointMiami12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointMiami12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+        <asterisksinsports:characterisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftMiami12"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Miami12"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Miami12"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextMiami12"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#2012_NBA_Finals"/>
+        <rdfs:label>Governing Body viewpoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointMichael08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointMichael08">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+        <asterisksinsports:characterisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftMichael08"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Michael08"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Michael08"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextMichael08"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#XXIX_Summer_Olympiad_200-metre_butterfly"/>
+        <rdfs:label>Governing Body viewpoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointNew09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointNew09">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+        <asterisksinsports:characterisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftNew09"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1New09"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2New09"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextNew09"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Super_Bowl_XLIV"/>
+        <rdfs:label>Governing Body viewpoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointOscar08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointOscar08">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+        <asterisksinsports:characterisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftOscar08"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Oscar08"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Oscar08"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextOscar08"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#13th_Summer_Paralympiad_100_metres"/>
+        <rdfs:label>Governing Body viewpoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointQuinn21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointQuinn21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+        <asterisksinsports:characterisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftQuinn21"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Quinn21"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Quinn21"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextQuinn21"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#XXXII_Summer_Olympiad__football_tournament"/>
+        <rdfs:label>Governing Body viewpoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointTonya94 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointTonya94">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Viewpoint"/>
+        <asterisksinsports:characterisedBy rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftTonya94"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Tonya94"/>
+        <asterisksinsports:determines rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Tonya94"/>
+        <asterisksinsports:isInfluenced rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextTonya94"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#1994_U.S._Figure_Skating_Championships"/>
+        <rdfs:label>Governing Body viewpoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#XXIX_Summer_Olympiad_200-metre_butterfly -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#XXIX_Summer_Olympiad_200-metre_butterfly">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <asterisksinsports:achievedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Swimming"/>
+        <asterisksinsports:during rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeMichael08"/>
+        <asterisksinsports:hadParticipant rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Michael_Phelps"/>
+        <asterisksinsports:hasContext rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextMichael08"/>
+        <asterisksinsports:locatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#China"/>
+        <asterisksinsports:miredIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyMichael08"/>
+        <asterisksinsports:underAuspicesOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Olympic_Committee_IOC"/>
+        <rdfs:label>XXIX Summer Olympiad 200-metre butterfly (Swimming)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#XXXII_Summer_Olympiad__200_metres -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#XXXII_Summer_Olympiad__200_metres">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <asterisksinsports:achievedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Athletics"/>
+        <asterisksinsports:during rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeChristine12"/>
+        <asterisksinsports:hadParticipant rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Christine_Mboma"/>
+        <asterisksinsports:hasContext rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextChristine12"/>
+        <asterisksinsports:locatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Japan"/>
+        <asterisksinsports:miredIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyChristine12"/>
+        <asterisksinsports:underAuspicesOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Olympic_Committee_IOC"/>
+        <rdfs:label>XXXII Summer Olympiad  200-metres (Athletics)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#XXXII_Summer_Olympiad__football_tournament -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#XXXII_Summer_Olympiad__football_tournament">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <asterisksinsports:achievedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Soccer"/>
+        <asterisksinsports:during rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeQuinn21"/>
+        <asterisksinsports:hadParticipant rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Quinn"/>
+        <asterisksinsports:hasContext rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextQuinn21"/>
+        <asterisksinsports:locatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Japan"/>
+        <asterisksinsports:miredIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyQuinn21"/>
+        <asterisksinsports:underAuspicesOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Olympic_Committee_IOC"/>
+        <rdfs:label>XXXII Summer Olympiad  football tournament (Soccer)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#XXX_Summer_Olympiad_800_metres -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#XXX_Summer_Olympiad_800_metres">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <asterisksinsports:achievedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Athletics"/>
+        <asterisksinsports:during rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeMariya12"/>
+        <asterisksinsports:hadParticipant rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Mariya_Savinova"/>
+        <asterisksinsports:hasContext rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextMariya12"/>
+        <asterisksinsports:locatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#United_Kingdom"/>
+        <asterisksinsports:miredIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyMariya12"/>
+        <asterisksinsports:underAuspicesOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Olympic_Committee_IOC"/>
+        <rdfs:label>XXX Summer Olympiad 800 metres (Athletics)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextChelsea09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextChelsea09">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Chelsea09"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Chelsea09"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftChelsea09"/>
+        <rdfs:label>The game, then tied at 1-1, had many incorrect decisions by the referee Tom Henning Øvrebø. The use of the Away Goals rule instead of penalties gave Barcelona the win, as the team had scored more goals in the championship</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextChristine12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextChristine12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Christine12"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Christine12"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftChistine12"/>
+        <rdfs:label>In 2021, Mboma set an unratified world  record of 48.54 s in the 400 metres, which made her one of the favorites for the Olympics</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextDiego86 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextDiego86">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Diego86"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Diego86"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftDiego86"/>
+        <rdfs:label>Maradona, a soccer legend, played in the quarter-final match between Argentina and England</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextJuventus05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextJuventus05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Juventus05"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Juventus05"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftJuventus05"/>
+        <rdfs:label>The Italian soccer domestic competition, Serie A, selects the teams that will participate in the UEFA competitions and is the main event for domestic clubs in Italy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextLance03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextLance03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Lance03"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Lance03"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftLance03"/>
+        <rdfs:label>The athlete is the absolute record holder, winner of 7 consecutive editions of the Tour de France between 1999 and 2005</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextLegia93 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextLegia93">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Legia93"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Legia93"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftLegia93"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextManchester10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextManchester10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Manchester10"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Manchester10"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftManchester10"/>
+        <rdfs:label>Manchester City was a highly significant team throughout all the tournament seasons, winning titles in the period between 2009 and 2018, specifically in the years 2012, 2014, and 2018</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextMariya12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextMariya12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Mariya12"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Mariya12"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftMariya12"/>
+        <rdfs:label>European indoor champion and World indoor champion in the 800 meters, Savinova was one of the favorites for the 2012 Olympics</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextMiami12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextMiami12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Miami12"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Miami12"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftMiami12"/>
+        <rdfs:label>The 2011-2012 season would have taken place as usual</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextMichael08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextMichael08">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Michael08"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Michael08"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftMichael08"/>
+        <rdfs:label>Olympic medalist swimmer Michael Phelps wore a full-body suit for the first time in an Olympic competition</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextNew09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextNew09">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1New09"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2New09"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftNew09"/>
+        <rdfs:label>The New Orleans Saints led the 2009 season</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextOscar08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextOscar08">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Oscar08"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Oscar08"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftOscar08"/>
+        <rdfs:label>The para-athlete Oscar Pistorius won a bronze medal at the Athens Olympics and was a winner in several other championships. He was a favorite to compete in the 2008 Beijing Olympics</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextQuinn21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextQuinn21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Quinn21"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Quinn21"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftQuinn21"/>
+        <rdfs:label>Soccer player Quinn was the first openly transgender and non-binary athlete to compete for Canada and advocate for inclusion in the Olympics</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextTonya94 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextTonya94">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Context"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Tonya94"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Tonya94"/>
+        <asterisksinsports:influences rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftTonya94"/>
+        <rdfs:label>One day before the championship, Nancy Kerrigan, who was set to compete against Harding in the finals, was attacked in a hallway after a practice session</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyChelsea09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyChelsea09">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Officiating"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextChelsea09"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#54th_UEFA_Champions_League_semifinals"/>
+        <rdfs:label>Officiating decisions favoring Barcelona</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyChristine12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyChristine12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Gender"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextChristine12"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#XXXII_Summer_Olympiad__200_metres"/>
+        <rdfs:label>Participation of Mboma, a female athlete with naturally elevated testosterone levels</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyDiego86 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyDiego86">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#RuleViolation"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextDiego86"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#13th_FIFA_World_Cup"/>
+        <rdfs:label>Violation of the rule against touching the ball with the hands.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyJuventus05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyJuventus05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Officiating"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextJuventus05"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#2004/05_Serie_A"/>
+        <rdfs:label>Selection of favorable officials for Juventus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyLance03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyLance03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Doping"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextLance03"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Tour_de_France_90"/>
+        <rdfs:label>Detection of illicit substance in athlete&apos;s body</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyLegia93 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyLegia93">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ContextualFactors"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextLegia93"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#1992/93_Ekstraklasa"/>
+        <rdfs:label>The coincidence of two games with improbable results</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyManchester10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyManchester10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Ethics"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextManchester10"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#18th_Premier_League"/>
+        <rdfs:label>Violation of fiscal rules to conceal deficits and irregularities</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyMariya12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyMariya12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Doping"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextMariya12"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#XXX_Summer_Olympiad_800_metres"/>
+        <rdfs:label>Detection of illicit substance  in athlete&apos;s body</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyMiami12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyMiami12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ContextualFactors"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextMiami12"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#2012_NBA_Finals"/>
+        <rdfs:label>Reduction in the number of games during the season.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyMichael08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyMichael08">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Technology"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextMichael08"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#XXIX_Summer_Olympiad_200-metre_butterfly"/>
+        <rdfs:label>Use of unfair technological clothing</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyNew09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyNew09">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#RuleViolation"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextNew09"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Super_Bowl_XLIV"/>
+        <rdfs:label>Payment scheme for injuring opponents during matches</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyOscar08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyOscar08">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Technology"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextOscar08"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#13th_Summer_Paralympiad_100_metres"/>
+        <rdfs:label>Use of unfair technological prostheses</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyQuinn21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyQuinn21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Gender"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextQuinn21"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#XXXII_Summer_Olympiad__football_tournament"/>
+        <rdfs:label>Participation of the transgender athlete Quinn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyTonya94 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyTonya94">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Ethics"/>
+        <asterisksinsports:alterates2 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextTonya94"/>
+        <asterisksinsports:towards1 rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#1994_U.S._Figure_Skating_Championships"/>
+        <rdfs:label>Use of aggression to obstruct competitors’ participation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#13th_FIFA_World_Cup -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#13th_FIFA_World_Cup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <asterisksinsports:achievedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Soccer"/>
+        <asterisksinsports:during rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeDiego86"/>
+        <asterisksinsports:hadParticipant rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Diego_Maradona"/>
+        <asterisksinsports:hasContext rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextDiego86"/>
+        <asterisksinsports:locatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Mexico"/>
+        <asterisksinsports:miredIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyDiego86"/>
+        <asterisksinsports:underAuspicesOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Federation_of_Association_Football_FIFA"/>
+        <rdfs:label>13th FIFA World Cup</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#13th_Summer_Paralympiad_100_metres -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#13th_Summer_Paralympiad_100_metres">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <asterisksinsports:achievedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Athletics"/>
+        <asterisksinsports:during rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeOscar08"/>
+        <asterisksinsports:hadParticipant rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Oscar_Pistorius"/>
+        <asterisksinsports:hasContext rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextOscar08"/>
+        <asterisksinsports:locatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#China"/>
+        <asterisksinsports:miredIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyOscar08"/>
+        <asterisksinsports:underAuspicesOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#International_Paralympic_Committee_IPC"/>
+        <rdfs:label>13th Summer Paralympiad 100 metres (Athletics)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#18th_Premier_League -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#18th_Premier_League">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <asterisksinsports:achievedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Soccer"/>
+        <asterisksinsports:during rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeManchester10"/>
+        <asterisksinsports:hadParticipant rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Manchester_City_team"/>
+        <asterisksinsports:hasContext rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextManchester10"/>
+        <asterisksinsports:locatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#England"/>
+        <asterisksinsports:miredIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyManchester10"/>
+        <asterisksinsports:underAuspicesOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Football_Association_FA"/>
+        <rdfs:label>18th Premier League</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#1992/93_Ekstraklasa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#1992/93_Ekstraklasa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <asterisksinsports:achievedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Soccer"/>
+        <asterisksinsports:during rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeLegia93"/>
+        <asterisksinsports:hadParticipant rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Legia_Warsaw_team_/_ŁKS_Łódź_team_/__Lech_Poznań__team"/>
+        <asterisksinsports:hasContext rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextLegia93"/>
+        <asterisksinsports:locatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Poland"/>
+        <asterisksinsports:miredIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyLegia93"/>
+        <asterisksinsports:underAuspicesOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Polish_Football_Association_PZPN"/>
+        <rdfs:label>1992/93 Ekstraklasa</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#1994_U.S._Figure_Skating_Championships -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#1994_U.S._Figure_Skating_Championships">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <asterisksinsports:achievedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Figure_Skating"/>
+        <asterisksinsports:during rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeTonya94"/>
+        <asterisksinsports:hadParticipant rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Tonya_Harding"/>
+        <asterisksinsports:hasContext rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextTonya94"/>
+        <asterisksinsports:locatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#United_States_of_America"/>
+        <asterisksinsports:miredIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyTonya94"/>
+        <asterisksinsports:underAuspicesOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#U.S._Figure_Skating_Association_USFSA"/>
+        <rdfs:label>U.S. Figure Skating Championships 1994</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#2004/05_Serie_A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#2004/05_Serie_A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <asterisksinsports:achievedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Soccer"/>
+        <asterisksinsports:during rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeJuventus05"/>
+        <asterisksinsports:hadParticipant rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Juventus_team"/>
+        <asterisksinsports:hasContext rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextJuventus05"/>
+        <asterisksinsports:locatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Italy"/>
+        <asterisksinsports:miredIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyJuventus05"/>
+        <asterisksinsports:underAuspicesOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Italian_Football_Federation_FIGC"/>
+        <rdfs:label>2004/05 Serie A (Italy)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#2012_NBA_Finals -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#2012_NBA_Finals">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <asterisksinsports:achievedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Basketball"/>
+        <asterisksinsports:during rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeMiami12"/>
+        <asterisksinsports:hadParticipant rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Miami_Heat_team"/>
+        <asterisksinsports:hasContext rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextMiami12"/>
+        <asterisksinsports:locatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#United_States_of_America"/>
+        <asterisksinsports:miredIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyMiami12"/>
+        <asterisksinsports:underAuspicesOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#National_Basketball_Association&apos;s_NBA"/>
+        <rdfs:label>2012 NBA Finals</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#54th_UEFA_Champions_League_semifinals -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#54th_UEFA_Champions_League_semifinals">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Achievement"/>
+        <asterisksinsports:achievedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Soccer"/>
+        <asterisksinsports:during rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#TimeChelsea09"/>
+        <asterisksinsports:hadParticipant rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Chelsea_team_/_Barcelona_team"/>
+        <asterisksinsports:hasContext rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#contextChelsea09"/>
+        <asterisksinsports:locatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Spain"/>
+        <asterisksinsports:miredIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#controversyChelsea09"/>
+        <asterisksinsports:underAuspicesOf rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Union_of_European_Football_Associations_UEFA"/>
+        <rdfs:label>54th UEFA Champions League semifinals</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Chelsea_team_/_Barcelona_team -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Chelsea_team_/_Barcelona_team">
+        <rdf:type rdf:resource="https://sportschema.org/ontologies/main/Agent"/>
+        <asterisksinsports:comingFrom rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#England"/>
+        <asterisksinsports:participatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#54th_UEFA_Champions_League_semifinals"/>
+        <asterisksinsports:playedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Soccer"/>
+        <rdfs:label>Chelsea team / Barcelona team</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#Legia_Warsaw_team_/_ŁKS_Łódź_team_/__Lech_Poznań__team -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Legia_Warsaw_team_/_ŁKS_Łódź_team_/__Lech_Poznań__team">
+        <rdf:type rdf:resource="https://sportschema.org/ontologies/main/Agent"/>
+        <asterisksinsports:comingFrom rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Poland"/>
+        <asterisksinsports:participatedIn rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#1992/93_Ekstraklasa"/>
+        <asterisksinsports:playedInSport rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Soccer"/>
+        <rdfs:label>Legia Warsaw team / ŁKS Łódź team / Lech Poznań  team</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2024/asterisksinsports#National_Basketball_Association&apos;s_NBA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#National_Basketball_Association&apos;s_NBA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#GoverningBody"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude1Miami12"/>
+        <asterisksinsports:hasAttitude rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Attitude2Miami12"/>
+        <asterisksinsports:hasAttitudeShift rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#AttitudeShiftMiami12"/>
+        <asterisksinsports:hasViewpoint rdf:resource="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ViewpointMiami12"/>
+        <rdfs:label>NBA - National Basketball Association&apos;s</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#ContextualFactors"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Doping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Ethics"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Gender"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Officiating"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#RuleViolation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2024/asterisksinsports#Technology"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
