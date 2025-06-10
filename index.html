@@ -570,7 +570,7 @@
                             <h4>3.1 - Dataset</h4>
                             <p>The dataset focuses on asterisks in sports, the dataset structure overviews cases across various sports, highlighting major accomplishments, the nature of the controversy, regulatory responses, and changes to official titles. Each entry in the dataset represents a documented athlete or team involved in a significant asterisk, offering a concise yet comprehensive outline of essential information about the participant and the event , its context, and its consequences.</p>
                             <p><b>Note:</b>The dataset is organized by individual achievements. As a result, participants may appear more than once if they were involved in multiple seasons or different achievements.</p>
-                            <p>Each row in the CSV file is organized into the following columns:</p>
+                            <p>Each row in the <a href="https://github.com/krzywonos/asterisks-in-sports/blob/main/dataset/datasetSports.csv">CSV</a> file is organized into the following columns:</p>
                             <ol>
                                 <li><b>Participant:</b> The name of the athlete or team involved in a major sporting event or controversy.</li>
                                 <li><b>Provenance:</b> Indicates the national origin or citizenship of the participant.</li>
@@ -592,8 +592,10 @@
                         <div id="item3-2">
                             <h4>3.2 - Knowledge graph</h4>
                             <p>We populated the knowledge graph using the asterisksinsports ontology and a sample of the complete dataset, which included two instances of each controversy type. This was done by creating individuals directly in Protégé and defining their relationships.</p>
-                            <p>After populating the graph, we used Protégé to validate the ontology’s structure and functionality. By running the Reasoner, we leveraged automatic inference to detect inconsistencies, confirm class memberships, and ensure the logical integrity of the ontology.</p>
-                            <p>With the graph populated, the SPARQL endpoint can be used to run queries</p>
+                            <p>After populating the graph, we used Protégé to validate the ontology’s structure and functionality. By running the Reasoner, we leveraged automatic inference to detect inconsistencies, confirm class memberships, and ensure the logical integrity of the ontology.</p><br>
+                            <div align="center"><img src="img/Reasoner.png" alt="Visualisation of the first-level ontology" height="40%" width="40%"></div><br>
+                            <p>With the graph populated, the SPARQL endpoint can be used to run queries</p><br>
+                            <div align="center"><img src="img/RDFQueries.png" alt="Visualisation of the first-level ontology" height="40%" width="40%"></div><br>
                         </div>
                         <div id="item4">
                             <h3>4 - Conclusions</h3>
