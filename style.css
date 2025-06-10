@@ -26,6 +26,10 @@ body:before {
     padding-top: 1vh;
 }
 
+.nav-link {
+    color: #4AF72F !important;
+}
+
 #documentation-navbar{
     display:none;
 }
